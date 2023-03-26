@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="一个简单的博客" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>用户中心项目 |  上春</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-用户中心"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  用户中心项目
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/26/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/" class="article-date">
+  <time datetime="2023-03-26T06:52:53.846Z" itemprop="datePublished">2023-03-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">6 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><p>作为其他系统的一个统一的用户管理中心，不用每一个系统都创建一个新的用户管理系统</p>
+<h1 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h1><p>三件套 + ant design pro + react + umi + ant design(组件库)</p>
+<p>后端：</p>
+<ul>
+<li>java</li>
+<li>spring （依赖注入框架，帮助管理Java对象，集成一些其他的内容）</li>
+<li>springmvc （web 框架， 提供接口访问，restful接口等能力）</li>
+<li>mybatis（持久层框架，对jdbc的封装）</li>
+<li>mybatis-plus（对mybatis的增强，不用写sql也能实现增删改查）<ul>
+<li><a target="_blank" rel="noopener" href="https://baomidou.com/">https://baomidou.com/</a></li>
+</ul>
+</li>
+<li>springboot （快速启动，）</li>
+<li>mysql</li>
+</ul>
+<h1 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h1><p>初始化</p>
+<p>数据库设计</p>
+<p>登录</p>
+<p>注册</p>
+<h1 id="初始化前端"><a href="#初始化前端" class="headerlink" title="初始化前端"></a>初始化前端</h1><p><strong>初始化项目</strong></p>
+<p><strong>引入组件</strong></p>
+<p><strong>框架介绍 &#x2F; 瘦身 （在ant design pro 官网查看目录介绍）</strong></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><strong>node:internal&#x2F;crypto&#x2F;hash:71 this[kHandle] &#x3D; new _Hash(algorithm, xofLen)； 解决方法</strong></p>
+<p>​	执行yarn start 或者 npm start时出现错误：<br>​	Error: error:0308010C:digital envelope routines::unsupported</p>
+<p>​	说明node版本太高，卸载node安装低版本node</p>
+<h1 id="初始化后端"><a href="#初始化后端" class="headerlink" title="初始化后端"></a>初始化后端</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>zip压缩包 解压，cmd打开bin</p>
+<p><strong>以前安装过MySQL：</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> stop MySQL // 停止服务</span><br><span class="line">sc delete MySQL // 删除服务</span><br><span class="line">mysqld remove // 移除服务</span><br></pre></td></tr></table></figure>
+
+<p>安装MySQL:</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console // 初始化</span><br><span class="line">mysqld install // 安装myql服务</span><br><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> MySQL // 启动MySQL服务</span><br><span class="line">mysql -u root -p //登录</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="引入项目框架"><a href="#引入项目框架" class="headerlink" title="引入项目框架"></a>引入项目框架</h2><p>spring boot devtools 热部署</p>
+<p>lombok 自动生成get set方法</p>
+<p>Spring Configuration Processor 支持spring的configuration properties等注解，读取属性文件时有用</p>
+<p>mysql driver</p>
+<p>redis （用到后再加）</p>
+<p>spring web 给spring项目增加web访问能力</p>
+<p>mybatis 数据访问层的框架，操作数据库，对数据库进行增删改查</p>
+<h2 id="添加功能"><a href="#添加功能" class="headerlink" title="添加功能"></a>添加功能</h2><p>user的查询：</p>
+<ul>
+<li>user对象</li>
+<li>usermapper</li>
+<li>在启动类上加上包扫描 @MapperScan </li>
+<li>测试查询</li>
+</ul>
+<h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>Junit <strong>断言</strong></p>
+<p>认为这里的结果应该是一个认定的答案 如果不是就报错</p>
+<h2 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h2><h3 id="java版本与springboot版本对应的关系"><a href="#java版本与springboot版本对应的关系" class="headerlink" title="java版本与springboot版本对应的关系"></a><strong>java版本与springboot版本对应的关系</strong></h3><table>
+<thead>
+<tr>
+<th>spring boot version</th>
+<th>java version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>springboot2.x</td>
+<td>8 or 9</td>
+</tr>
+</tbody></table>
+<h3 id="springboot配置mysql"><a href="#springboot配置mysql" class="headerlink" title="springboot配置mysql"></a><strong>springboot配置mysql</strong></h3><p>maven导入mysql依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="comment"># DataSource Config</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/user_center?useUnicode=true&amp;useSSL=false&amp;characterEncoding=utf-8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="spring-的自动注入（注解开发）原理"><a href="#spring-的自动注入（注解开发）原理" class="headerlink" title="spring 的自动注入（注解开发）原理"></a><strong>spring 的自动注入（注解开发）原理</strong></h3><p>@resource</p>
+<p>@autowrite</p>
+<h1 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h1><p>用户表： </p>
+<p>id 主键 </p>
+<p>username 昵称</p>
+<p>user_account 登录账号</p>
+<p>avatar_url 头像</p>
+<p>gender 性别</p>
+<p>user_password 密码</p>
+<p>phone 电话</p>
+<p>email 邮箱</p>
+<p>user_status 状态</p>
+<p>user_role  用户角色 0 默认 1 管理员</p>
+<hr>
+<p>下面三个字段在所有表中都应该有所记录</p>
+<p>create_time 创建时间 current_timestamp</p>
+<p>update_time 更新时间 current_timestamp on update current_timestamp</p>
+<p>is_delete 是否删除 （逻辑删除）</p>
+<p><strong>开闭原则</strong>：对拓展开放，对修改关闭</p>
+<p>truncate 清空表数据</p>
+<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h3 id="实现基本的数据库操作"><a href="#实现基本的数据库操作" class="headerlink" title="实现基本的数据库操作"></a>实现基本的数据库操作</h3><ol>
+<li>模型user对象 &#x3D;&gt; 和数据库关联</li>
+</ol>
+<p>mybatisX插件自动生成domain实体对象</p>
+<p>generateAllSetter自动生成所有对象属性设置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mybatis-plus 自动转驼峰的配置 注意</span><br></pre></td></tr></table></figure>
+
+<h3 id="注册流程"><a href="#注册流程" class="headerlink" title="注册流程"></a>注册流程</h3><ol>
+<li><p>用户输入账号密码，校验码（todo）</p>
+</li>
+<li><p>校验用户的账户、密码、校验密码是否合规</p>
+<ol>
+<li>账户不小于6位</li>
+<li>密码不小于8位</li>
+<li>账户不能重复</li>
+<li>账户不包含特殊字符</li>
+<li>密码和校验密码相同</li>
+</ol>
+</li>
+<li><p>对密码进行加密</p>
+</li>
+<li><p>向数据库插入用户数据</p>
+<p>工具包：apache.common.lang3， 提供了很多重用的公共方法</p>
+</li>
+</ol>
+<p>流程中注意对性能的处理，比如账户不能重复中会进行查库的操作可以放到最后进行</p>
+<p>单元测试</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">userAccount</span> <span class="operator">=</span> <span class="string">&quot;sc&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">userPassword</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">checkPassword</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">long</span> <span class="variable">l</span> <span class="operator">=</span> userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 账户小于6位</span></span><br><span class="line">        userPassword = <span class="string">&quot;123456&quot;</span>;</span><br><span class="line">        checkPassword = <span class="string">&quot;1234567&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 密码不相等</span></span><br><span class="line">        userAccount = <span class="string">&quot;shangchun！&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 密码小于8位</span></span><br><span class="line">        userPassword = <span class="string">&quot;1234567&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 账号不符合规范</span></span><br><span class="line">        userPassword = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">        checkPassword = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        userAccount = <span class="string">&quot;shangchun&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br></pre></td></tr></table></figure>
+
+<h3 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h3><p>接受参数：用户账户，密码</p>
+<p>请求类型：POST</p>
+<p>返回值：用户信息（<strong>脱敏</strong>）</p>
+<h4 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h4><ol>
+<li><p>校验用户账户和密码是否合法</p>
+</li>
+<li><p>校验密码是否输入正确（之后可以做限流（看一下最近这个账户登录过多少次，如果登录次数太多，限制一下））</p>
+<p>逻辑删除</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">logic-delete-value:</span> <span class="number">1</span> <span class="comment"># 逻辑已删除值(默认为 1)</span></span><br><span class="line">      <span class="attr">logic-not-delete-value:</span> <span class="number">0</span> <span class="comment"># 逻辑未删除值(默认为 0)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="comment">// 这个注解可以使用log</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>记录用户的登录态（session），存储到服务器上（用SpringBoot框架封装的服务器tomcat记录）</p>
+</li>
+<li><p>返回用户信息（脱敏）</p>
+</li>
+</ol>
+<h4 id="如何知道是哪个用户登录-了"><a href="#如何知道是哪个用户登录-了" class="headerlink" title="如何知道是哪个用户登录 了"></a>如何知道是哪个用户登录 了</h4><p>（javaweb）</p>
+<ol>
+<li>链接服务器端后，获得一个session状态返回给前端</li>
+<li>登录成功后，得到登录成功的session，给session设置一些值（比如用户信息），返回给前端一个设置cookie的命令</li>
+<li>前端设置cookie到浏览器</li>
+<li>前端再次请求后端的时候，再请求头中带上cookie去请求</li>
+<li>从session中取出基于该session存储的变量</li>
+</ol>
+<h3 id="用户管理接口"><a href="#用户管理接口" class="headerlink" title="用户管理接口"></a>用户管理接口</h3><p>用户注册</p>
+<p>用户登录</p>
+<p><em><strong>鉴权</strong></em>：对某些操作获取用户的权限值查看是否可以使用</p>
+<p>查询用户 (可以根据username查找)</p>
+<p>删除用户 (id)</p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a><strong>测试</strong></h4><p>IDEA: Tools - &gt; Http Client &#x2F; 直接点击controller边上的按钮</p>
+<p>PostMan(没那么方便)</p>
+<h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><p>修改 login 请求路径</p>
+<h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><p>正向代理：替客户端发送请求</p>
+<p>反向代理：替服务器接受请求（代理服务器进行负载均衡）</p>
+<p>umi 中对 request 请求的配置</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="attr">request</span>: <span class="title class_">RequestConfig</span> = &#123;</span><br><span class="line">  <span class="comment">// prefix: &#x27;http://localhost:8080&#x27;,</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>ant design pro 中的代理</p>
+<p><img src="H:\Users\zx065\Desktop\Java\用户中心.assets\image-20230228142352616.png" alt="image-20230228142352616"></p>
+<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><h2 id="前端-1"><a href="#前端-1" class="headerlink" title="前端"></a>前端</h2><p>添加注册路由</p>
+<p>修改重定向</p>
+<blockquote>
+<p>app.tsx 是全局初始和启动的入口</p>
+</blockquote>
+<p>前端后端都要做校验的原因：用户可以绕过前端直接向后端发起请求</p>
+<h2 id="待优化-todo"><a href="#待优化-todo" class="headerlink" title="待优化 todo"></a>待优化 todo</h2><p>前端密码提示优化</p>
+<p>用户名重复，没有友好的提示</p>
+<p>用户注销</p>
+<h1 id="获取用户登录态"><a href="#获取用户登录态" class="headerlink" title="获取用户登录态"></a>获取用户登录态</h1><p>用户接口</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://yanonjun.github.io.git/2023/03/26/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MyBatis/" rel="tag">MyBatis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/03/26/%E8%B5%84%E6%BA%90/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            资源分享
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/03/26/Golang/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Golang</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> Rise Spring
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="上春"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
