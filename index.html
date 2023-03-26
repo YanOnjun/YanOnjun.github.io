@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="一个简单的博客" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> 上春</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">上春</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-Java"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/26/Java/"
+    >Java</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/26/Java/" class="article-date">
+  <time datetime="2023-03-26T04:21:27.621Z" itemprop="datePublished">2023-03-26</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="Java-特点"><a href="#Java-特点" class="headerlink" title="Java 特点"></a><strong>Java 特点</strong></h2><p>java语言特性</p>
+<ul>
+<li>面对对象：将重点放在数据和对象的接口上</li>
+<li>简单性：相比c++，减少了头文件、指针等很多概念，而且java可以在很小的机器上独立运行</li>
+<li>Java语言是健壮的 : 强类型机制, 异常处理, 垃圾的自动收集</li>
+<li>跨平台性：java文件被编译成字节码文件，然后在不同的机器上可以通过JVM编译成机器码执行</li>
+<li>解释性语言：需要解释器来执行</li>
+<li>分布式：有丰富的例程库用于处理TCP&#x2F;IP协议，可以通过URL访问网络上的对象</li>
+</ul>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h2 id="IDEA-开发工具"><a href="#IDEA-开发工具" class="headerlink" title="IDEA 开发工具"></a>IDEA 开发工具</h2><ul>
+<li>新建项目</li>
+<li>运行调试</li>
+<li>界面配置</li>
+<li>插件管理</li>
+</ul>
+<h2 id="Java-基础语法"><a href="#Java-基础语法" class="headerlink" title="Java 基础语法"></a>Java 基础语法</h2><h3 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h3><ul>
+<li><p>1字节8个bit</p>
+</li>
+<li><p>byte 1字节</p>
+</li>
+<li><p>short 2字节</p>
+<p>byte short 运算时会转换到int类型</p>
+</li>
+<li><p>int 4字节</p>
+</li>
+<li><p>long 8字节</p>
+</li>
+<li><p>float 4字节</p>
+</li>
+<li><p>double 8字节<br>浮点数 &#x3D; 符号位+指数位+尾数位<br>尾数位可能丢失造成精度丢失</p>
+<p>浮点数的比较应该是两个数的差值的绝对值，在某个精度范围内判断（Math.abs(num1 - num2)&lt;）</p>
+</li>
+<li><p>boolean 1字节</p>
+</li>
+<li><p>char 2字节</p>
+</li>
+</ul>
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><ul>
+<li>for</li>
+<li>if</li>
+<li>else if</li>
+<li>while</li>
+<li>dowhile</li>
+<li>swich</li>
+</ul>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>final: </p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a><em>面向对象</em></h2><p>使用原有的技术方法（单独定义和使用数组解决存储）不利于数据的管理，效率低下，代码的可重用性和可维护性差，重复性高，程序的可读性、可扩展性差。</p>
+<p>面对对象是一种编程思想。相比于传统的方法，解决了上面的问题，提供了类、对象、封装继承和多态的概念，面对对象更加的灵活，可以更好的满足复杂的业务需求。</p>
+<p>类是自定义的数据类型，是一种抽象的概念，描述了一类对象的共同特征</p>
+<p>对象是具体的实例，是类的具体表现</p>
+<h3 id="面对对象的三大特征"><a href="#面对对象的三大特征" class="headerlink" title="面对对象的三大特征"></a>面对对象的三大特征</h3><ul>
+<li><p>封装：把数据和操作数据的方法装在一起，外部不能直接调用访问内部数据</p>
+</li>
+<li><p>继承：一个类从另一个类中继承属性和方法，减少代码重复</p>
+</li>
+<li><p>多态：一个类可以拥有多种形态，根据不同的情况执行不同的操作</p>
+<p>多态和继承的区别在于：继承是一种静态的关系，在编译时就可以确定，多态是动态的关系，在运行时才知道需要执行怎样的操作</p>
+</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>是类的行为</p>
+<h4 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h4><p>对象可以调用类的实例方法，但是不推荐这样做，这种方式会造成混淆，静态方法计算的结果跟对象没有关系。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">employee</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="title function_">getNextId</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="keyword">static</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    <span class="type">Employee</span> <span class="variable">harry</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Employee</span>();</span><br><span class="line">    harry.getNextId();</span><br><span class="line">    Employee.getNextId();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h4><h4 id="方法参数"><a href="#方法参数" class="headerlink" title="方法参数"></a>方法参数</h4><p>在java中方法参数传递的方式是值传递</p>
+<p>在方法中对传入的值进行处理的时候不会影响到原值</p>
+<p>但在对象的处理中，拷贝的对象引用的仍然是原有的地址，所以对对象中的属性操作时不会出现问题</p>
+<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>一个类中多个同名但是参数列表不同的方法</p>
+<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>子类重新定义父类中的方法，实现不同的功能</p>
+<h3 id="对象的内存布局"><a href="#对象的内存布局" class="headerlink" title="对象的内存布局"></a><strong>对象的内存布局</strong></h3><p><img src="H:\Users\zx065\Desktop\Java\Java基础.assets\image-20230212191224066.png" alt="image-20230212191224066"></p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h4 id="super"><a href="#super" class="headerlink" title="super"></a>super</h4><p>super与this不同，super不是对象的引用，不能将super赋给另外一个对象变量，只是一个指示编译器去调用父类方法的特殊关键字。</p>
+<h4 id="子类构造器"><a href="#子类构造器" class="headerlink" title="子类构造器"></a>子类构造器</h4><p>用 super 实现对父类构造器的调用，使用 super 调用构造器的语句必须是子类构造器的第一条</p>
+<p>如果子类的构造器没有显式的调用父类的构造器，自动调用父类没有参数的构造器，如果父类没有无参构造器，则会编译错误 </p>
+<p>一个对象被指示为多种类型的情况被称为<em>多态</em>，运行时自动选择调用方法的现象叫做<em>动态绑定</em></p>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>父类对象的任何地方都可以用子类对象置换，对象变量是多态的</p>
+<p><strong>注意：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Manager[] managers = <span class="keyword">new</span> <span class="title class_">Manager</span>[<span class="number">3</span>];</span><br><span class="line">managers[<span class="number">0</span>] = boss;</span><br><span class="line"><span class="comment">// 父类对象引用子类对象</span></span><br><span class="line">Employee[] employees = managers; </span><br><span class="line"><span class="comment">// 虽然是父类，但是数组的类型是子类，父类替换其中的元素会报错</span></span><br><span class="line">employees[<span class="number">0</span>] = employee; <span class="comment">// java.lang.ArrayStoreException: object.Employee</span></span><br><span class="line">System.out.println(managers[<span class="number">0</span>].getName()); </span><br></pre></td></tr></table></figure>
+
+<h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><ul>
+<li>只能在继承层次内进行类型转换</li>
+<li>将父类转换为子类之前，应该使用instanceof检查</li>
+</ul>
+<h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><p>是指只定义属性和行为的抽象概念，但是不实现</p>
+<p>包含一个或多个抽象方法的类必须声明为抽象的，抽象类中也可以含有具体的方法</p>
+<p>抽象类不能被实现，但是可以引用子类的对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Person</span> <span class="variable">p</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Employee</span>();</span><br></pre></td></tr></table></figure>
+
+<h4 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h4><table>
+<thead>
+<tr>
+<th>private</th>
+<th>仅对本类可见</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>所有都可见</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>对本包和所有子类可见</td>
+</tr>
+<tr>
+<td>（不填）</td>
+<td>对本包可见</td>
+</tr>
+</tbody></table>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><h4 id="equals"><a href="#equals" class="headerlink" title="equals"></a>equals</h4><p>equals的最好的流程</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object otherObject)</span> &#123;</span><br><span class="line">    <span class="comment">// 检测 this 与 otherObject 是否引用同一个对象</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">this</span> == otherObject) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="comment">// 检测 otherObject 是否为 null</span></span><br><span class="line">    <span class="keyword">if</span>(otherObject == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="comment">// 比较 this 与 otherObject 是否属于同一个类。</span></span><br><span class="line">    <span class="comment">// 	如果 equals 的语义在每个子类中有所改变，就使用 getClass 检测</span></span><br><span class="line">    <span class="comment">// 	如果所有的子类都拥有统一的语义，就使用 instanceof 检测</span></span><br><span class="line">    <span class="keyword">if</span>(getClass() != otherObject.getClass()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="comment">// 将 otherObject 转换为相应的类类型变量</span></span><br><span class="line">    <span class="type">Employee</span> <span class="variable">other</span> <span class="operator">=</span> (Employee) otherObject;</span><br><span class="line">    <span class="comment">// 现在开始对所有需要比较的域进行比较。</span></span><br><span class="line">    <span class="keyword">return</span> Objects.equals(name, other.name)</span><br><span class="line">            &amp;&amp; salary == other.salary</span><br><span class="line">            &amp;&amp; id == other.id;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="hashcode"><a href="#hashcode" class="headerlink" title="hashcode"></a>hashcode</h4><p>重新定义equals方法，就必须重新定义hashcode方法，在插入hash表时会计算插入对象的hash值决定插入的位置。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> Objects.hash(name, salary);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="继承的设计技巧"><a href="#继承的设计技巧" class="headerlink" title="继承的设计技巧"></a>继承的设计技巧</h3><ol>
+<li>将公共操作和域放在父类</li>
+<li>不要使用受保护的域</li>
+<li>使用继承实现is-a关系</li>
+<li>除非所有继承的方法都有意义，否则不要使用继承</li>
+<li>覆盖方法时不要改变预期的行为</li>
+<li>使用多态，而不是用类型信息</li>
+<li>不要过多的使用反射</li>
+</ol>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>指一组定义的方法，可以被其他类实现</p>
+<p><strong>抽象类和接口的区别</strong>：抽象类可以包含抽象方法和非抽象方法，接口只能包含抽象方法，抽象类可以定义实例变量，接口不能</p>
+<p>每个类只可以扩展于一个类，但是可以实现多个接口</p>
+<h3 id="接口的多态"><a href="#接口的多态" class="headerlink" title="接口的多态"></a>接口的多态</h3><p>多态参数：作为参数传入方法，方法参数中可以使用实现了接口的类的对象实例</p>
+<p>多态数组：接口数组中可以存放不同的实现了接口的类的对象实例</p>
+<p>多态传递：接口B继承了其他的接口A时，实现了接口B的类也要实现接口A的方法</p>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>外部类</p>
+<p>内部类</p>
+<ul>
+<li><p>定义在外部类的局部位置上（方法内）</p>
+<ol>
+<li><p>局部内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Outer</span> &#123; <span class="comment">// 外部类</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">n1</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">m2</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;m2 调用&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">m1</span> <span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 局部内部类写在方法或者代码块中</span></span><br><span class="line">        <span class="comment">// 本质是一个局部变量 不能有访问修饰符 可以用final修饰</span></span><br><span class="line">        <span class="comment">// 作用域只在定义的方法或者代码块中</span></span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">Inner</span> &#123;</span><br><span class="line">            <span class="keyword">private</span> <span class="type">int</span> <span class="variable">n1</span> <span class="operator">=</span> <span class="number">2000</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">f1</span> <span class="params">()</span> &#123;</span><br><span class="line">                <span class="comment">// 可以调用外部类的私有变量和私有方法</span></span><br><span class="line">                <span class="comment">// 如果存在重名，采取就近原则，调用外部类时采用类名.this.变量名调用</span></span><br><span class="line">                System.out.println(<span class="string">&quot;n1 = &quot;</span> + n1 + <span class="string">&quot;Outer.this.n1 = &quot;</span> + Outer.<span class="built_in">this</span>.n1);</span><br><span class="line">                m2();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 外部类 访问局部内部类的成员 只能在作用域内访问</span></span><br><span class="line">        <span class="type">Inner</span> <span class="variable">inner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Inner</span>();</span><br><span class="line">        <span class="type">int</span> <span class="variable">n11</span> <span class="operator">=</span> inner.n1;</span><br><span class="line">        inner.f1();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">	<span class="comment">// 匿名内部类</span></span><br><span class="line">    <span class="comment">// 编译类型是IA</span></span><br><span class="line">    <span class="comment">// 运行类型是 外部类类名$数字 LocalInnerClass$1</span></span><br><span class="line">    <span class="comment">// 只进行一次用于实例化对象 在实现类使用次数少的情况下 简化实现类的编写</span></span><br><span class="line">    <span class="type">IA</span> <span class="variable">tiger</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">IA</span> ()&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">cry</span><span class="params">()</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;tiger crying...&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IA</span>&#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">cry</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>定义在成员位置</p>
+<ol>
+<li>成员内部类</li>
+<li>静态内部类</li>
+</ol>
+</li>
+</ul>
+<p>其他类</p>
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">Size</span> &#123;</span><br><span class="line">    SMALL(<span class="string">&quot;S&quot;</span>), MEDIUM(<span class="string">&quot;M&quot;</span>), LARGE(<span class="string">&quot;L&quot;</span>), EXTRA_LARGE(<span class="string">&quot;XL&quot;</span>);</span><br><span class="line"></span><br><span class="line">    Size(String abbreviation) &#123;</span><br><span class="line">        <span class="built_in">this</span>.abbreviation = abbreviation;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String abbreviation;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getAbbreviation</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> abbreviation;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>比较两个枚举类型的值的时候直接用 &#x3D;&#x3D; 就可以了</p>
+<h2 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h2><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String</p>
+<p>StringBuffer</p>
+<p>StringBuilder</p>
+<h3 id="日期时间"><a href="#日期时间" class="headerlink" title="日期时间"></a>日期时间</h3><p>Data</p>
+<p>Calendar</p>
+<p>TimeStamp</p>
+<h2 id="集合类"><a href="#集合类" class="headerlink" title="集合类"></a><strong>集合类</strong></h2><p>集合主要分了两组：单列集合、双列集合</p>
+<h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><ul>
+<li><p>List</p>
+<p>ArrayList</p>
+<p>Vector</p>
+<p>LinkedArrayList</p>
+</li>
+<li><p>Set</p>
+<p>HashSet</p>
+<p>TreeSet</p>
+</li>
+</ul>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><ul>
+<li>HashMap</li>
+<li>Hashtable</li>
+<li>TreeMap</li>
+<li>Properties</li>
+<li>LinkedHashMap</li>
+</ul>
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a><strong>多线程</strong></h2><p>进程是一个容器，有多个线程</p>
+<p>实现多线程可以通过</p>
+<ul>
+<li>继承Thread， 实现类调用start()方法</li>
+<li>实现Runable(Thread也是实现Runable)</li>
+<li>实现Callable</li>
+</ul>
+<p>区别：Thread 是继承，Runable是接口，实现了Runable也要通过new Thread静态代理。一个实现了Runable接口的类实例可以传入不同的Thread启动，Callable有返回值。</p>
+<h2 id="IO-流"><a href="#IO-流" class="headerlink" title="IO 流"></a>IO 流</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>反射可以用来在运行时动态操作Java代码，分析类能力</p>
+<p>反射的作用：</p>
+<ul>
+<li>运行时分析类的能力</li>
+<li>运行时查看对象</li>
+<li>实现通用的数组操作代码</li>
+<li>利用method对象，运行时调用方法</li>
+</ul>
+<h3 id="运行时利用反射分析对象"><a href="#运行时利用反射分析对象" class="headerlink" title="运行时利用反射分析对象"></a>运行时利用反射分析对象</h3><p>获取对象域</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Employee</span> <span class="variable">harry</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Employee</span>(<span class="string">&quot;Harry Hacker&quot;</span>, <span class="number">21</span>, <span class="number">35000</span>);</span><br><span class="line">Class&lt;? <span class="keyword">extends</span> <span class="title class_">Employee</span>&gt; cl = harry.getClass();</span><br><span class="line"><span class="type">Field</span> <span class="variable">name</span> <span class="operator">=</span> cl.getDeclaredField(<span class="string">&quot;name&quot;</span>);</span><br><span class="line"><span class="comment">// name是私有</span></span><br><span class="line">name.setAccessible(<span class="literal">true</span>);</span><br><span class="line"><span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> name.get(harry);</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组复制"><a href="#数组复制" class="headerlink" title="数组复制"></a>数组复制</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title function_">goodCopyOf</span><span class="params">(Object a, <span class="type">int</span> newLength)</span> &#123;</span><br><span class="line">     <span class="type">Class</span> <span class="variable">cl</span> <span class="operator">=</span> a.getClass();</span><br><span class="line">     <span class="keyword">if</span> (!cl.isArray()) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">     <span class="type">Class</span> <span class="variable">componentType</span> <span class="operator">=</span> cl.getComponentType();</span><br><span class="line">     <span class="type">int</span> <span class="variable">length</span> <span class="operator">=</span> Array.getLength(a);</span><br><span class="line">     <span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> Array.newInstance(componentType, length);</span><br><span class="line">     System.arraycopy(a, <span class="number">0</span>, o, <span class="number">0</span>, Math.min(length, newLength));</span><br><span class="line">     <span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用Method"><a href="#使用Method" class="headerlink" title="使用Method"></a>使用Method</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Method</span> <span class="variable">m1</span> <span class="operator">=</span> Employee.class.getMethod(<span class="string">&quot;getName&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="反射实例"><a href="#反射实例" class="headerlink" title="反射实例"></a>反射实例</h3><h4 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h4><p>文档 ：Spring IOC </p>
+<h4 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h4><h4 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h4> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-hello-world"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/26/hello-world/"
+    >Hello World</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/26/hello-world/" class="article-date">
+  <time datetime="2023-03-26T04:15:59.474Z" itemprop="datePublished">2023-03-26</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+  </article>
+  
+
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> Rise Spring
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="上春"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
