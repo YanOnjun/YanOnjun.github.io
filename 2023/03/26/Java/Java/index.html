@@ -55,7 +55,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Java"
+  id="post-Java/Java"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -74,7 +74,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/26/Java/" class="article-date">
+      <a href="/2023/03/26/Java/Java/" class="article-date">
   <time datetime="2023-03-26T04:21:27.621Z" itemprop="datePublished">2023-03-26</time>
 </a> 
   <div class="article-category">
@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.8k</span>
+            <span class="post-count">2.9k</span>
         </span>
     </span>
 
@@ -95,7 +95,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">10 min</span>
+            <span class="post-count">11 min</span>
         </span>
     </span>
 </div>
@@ -282,10 +282,10 @@
 </ul>
 <h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><ul>
 <li>HashMap 1.7之前底层数据结构是数组加链表，1.8之后是数组加链表加红黑树，当单条链表元素超过8并且数组长度大于64之后会将链表转为红黑树。每次扩容两倍，添加时先通过扰动函数<code>hash()</code>计算 hash 值，然后计算 <code>(len-1) ^ hash</code> 得到 插入的位置。</li>
-<li>Hashtable</li>
-<li>TreeMap </li>
+<li>Hashtable </li>
+<li>TreeMap 1.7</li>
 <li>Properties 配置文件键值对</li>
-<li>LinkedHashMap 有序 可以传入一个比较器，用来决定添加进元素的顺序并决定元素是否添加</li>
+<li>LinkedHashMap 输出有序 可以传入一个比较器，用来决定添加进元素的顺序并决定元素是否添加</li>
 </ul>
 <h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a><strong>多线程</strong></h2><h3 id="进程线程"><a href="#进程线程" class="headerlink" title="进程线程"></a>进程线程</h3><p>进程是一个容器，有多个线程</p>
 <p>实现多线程可以通过</p>
@@ -295,11 +295,39 @@
 <li>实现Callable</li>
 </ul>
 <p>区别：Thread 是继承，Runable是接口，实现了Runable也要通过new Thread静态代理。一个实现了Runable接口的类实例可以传入不同的Thread启动，Callable有返回值。</p>
+<h3 id="线程七大状态"><a href="#线程七大状态" class="headerlink" title="线程七大状态"></a>线程七大状态</h3><p>新建–&gt; （就绪 –&gt; 运行）Runnable –&gt; 死亡</p>
+<p>阻塞</p>
+<p>定时等待</p>
+<p>等待</p>
 <h3 id="互斥锁"><a href="#互斥锁" class="headerlink" title="互斥锁"></a>互斥锁</h3><h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>两个线程互相持有对方接下来需要的资源无法放弃自身拥有的资源而造成的阻塞情况。</p>
-<h2 id="IO-流"><a href="#IO-流" class="headerlink" title="IO 流"></a>IO 流</h2><p>InputStream</p>
-<p>Reader</p>
-<p>OutputStream</p>
-<p>Writer</p>
+<h2 id="IO-流"><a href="#IO-流" class="headerlink" title="IO 流"></a>IO 流</h2><h3 id="流的分类"><a href="#流的分类" class="headerlink" title="流的分类"></a>流的分类</h3><ul>
+<li>按操作数据单位：字节流（8bit）二进制文件（音频，视频等，不会出现文件的损失），字符流（字符）文本文件</li>
+<li>流向：输入流，输出流</li>
+<li>角色：节点流、处理流&#x2F;包装流</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>字节流</strong></th>
+<th><strong>字符流</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>输入流</strong></td>
+<td>InputStream</td>
+<td>Reader</td>
+</tr>
+<tr>
+<td><strong>输出流</strong></td>
+<td>OutputStream</td>
+<td>Writer</td>
+</tr>
+</tbody></table>
+<h3 id="InputStream"><a href="#InputStream" class="headerlink" title="InputStream"></a>InputStream</h3><p>FileInputStream</p>
+<p>BufferedInputStream</p>
+<p>ObjectInputStream </p>
+<h3 id="OutputStream"><a href="#OutputStream" class="headerlink" title="OutputStream"></a>OutputStream</h3><p>FileOutputStream</p>
 <h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>反射可以用来在运行时动态操作Java代码，分析类能力</p>
 <p>反射的作用：</p>
 <ul>
@@ -318,12 +346,6 @@
 <h3 id="反射实例"><a href="#反射实例" class="headerlink" title="反射实例"></a>反射实例</h3><h4 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h4><p>文档 ：Spring IOC </p>
 <h4 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h4><h4 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h4> 
       <!-- reward -->
-      
-      <div id="reword-out">
-        <div id="reward-btn">
-          Donate
-        </div>
-      </div>
       
     </div>
     
@@ -386,7 +408,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://yanonjun.github.io.git/2023/03/26/Java/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://yanonjun.github.io.git/2023/03/26/Java/Java/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -399,7 +421,7 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/03/26/Spring/" class="article-nav-link">
+      <a href="/2023/03/26/Java/Spring/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
@@ -409,25 +431,13 @@
       </a>
     
     
-      <a href="/2023/03/26/hello-world/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hello World</div>
-      </a>
-    
   </nav>
 
-  
    
-  
-   
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
  
+   
+  
+    
 </article>
 
 </section>
@@ -528,10 +538,6 @@
         <i class="ri-search-line"></i>
       </a>
       
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
       
     </li>
   </ul>
@@ -776,7 +782,9 @@
 </script>
  
 <!-- CanvasBackground -->
-
+ 
+<script src="/js/dz.js"></script>
+ 
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "forest" });
@@ -784,6 +792,23 @@
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 

@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/03/26/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Java</title>
-    <url>/2023/03/26/Java/</url>
+    <url>/2023/03/26/Java/Java/</url>
     <content><![CDATA[<h2 id="Java-特点"><a href="#Java-特点" class="headerlink" title="Java 特点"></a><strong>Java 特点</strong></h2><p>java语言特性</p>
 <ul>
 <li>面对对象：将重点放在数据和对象的接口上</li>
@@ -193,10 +175,10 @@
 </ul>
 <h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><ul>
 <li>HashMap 1.7之前底层数据结构是数组加链表，1.8之后是数组加链表加红黑树，当单条链表元素超过8并且数组长度大于64之后会将链表转为红黑树。每次扩容两倍，添加时先通过扰动函数<code>hash()</code>计算 hash 值，然后计算 <code>(len-1) ^ hash</code> 得到 插入的位置。</li>
-<li>Hashtable</li>
-<li>TreeMap </li>
+<li>Hashtable </li>
+<li>TreeMap 1.7</li>
 <li>Properties 配置文件键值对</li>
-<li>LinkedHashMap 有序 可以传入一个比较器，用来决定添加进元素的顺序并决定元素是否添加</li>
+<li>LinkedHashMap 输出有序 可以传入一个比较器，用来决定添加进元素的顺序并决定元素是否添加</li>
 </ul>
 <h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a><strong>多线程</strong></h2><h3 id="进程线程"><a href="#进程线程" class="headerlink" title="进程线程"></a>进程线程</h3><p>进程是一个容器，有多个线程</p>
 <p>实现多线程可以通过</p>
@@ -206,11 +188,39 @@
 <li>实现Callable</li>
 </ul>
 <p>区别：Thread 是继承，Runable是接口，实现了Runable也要通过new Thread静态代理。一个实现了Runable接口的类实例可以传入不同的Thread启动，Callable有返回值。</p>
+<h3 id="线程七大状态"><a href="#线程七大状态" class="headerlink" title="线程七大状态"></a>线程七大状态</h3><p>新建–&gt; （就绪 –&gt; 运行）Runnable –&gt; 死亡</p>
+<p>阻塞</p>
+<p>定时等待</p>
+<p>等待</p>
 <h3 id="互斥锁"><a href="#互斥锁" class="headerlink" title="互斥锁"></a>互斥锁</h3><h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>两个线程互相持有对方接下来需要的资源无法放弃自身拥有的资源而造成的阻塞情况。</p>
-<h2 id="IO-流"><a href="#IO-流" class="headerlink" title="IO 流"></a>IO 流</h2><p>InputStream</p>
-<p>Reader</p>
-<p>OutputStream</p>
-<p>Writer</p>
+<h2 id="IO-流"><a href="#IO-流" class="headerlink" title="IO 流"></a>IO 流</h2><h3 id="流的分类"><a href="#流的分类" class="headerlink" title="流的分类"></a>流的分类</h3><ul>
+<li>按操作数据单位：字节流（8bit）二进制文件（音频，视频等，不会出现文件的损失），字符流（字符）文本文件</li>
+<li>流向：输入流，输出流</li>
+<li>角色：节点流、处理流&#x2F;包装流</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>字节流</strong></th>
+<th><strong>字符流</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>输入流</strong></td>
+<td>InputStream</td>
+<td>Reader</td>
+</tr>
+<tr>
+<td><strong>输出流</strong></td>
+<td>OutputStream</td>
+<td>Writer</td>
+</tr>
+</tbody></table>
+<h3 id="InputStream"><a href="#InputStream" class="headerlink" title="InputStream"></a>InputStream</h3><p>FileInputStream</p>
+<p>BufferedInputStream</p>
+<p>ObjectInputStream </p>
+<h3 id="OutputStream"><a href="#OutputStream" class="headerlink" title="OutputStream"></a>OutputStream</h3><p>FileOutputStream</p>
 <h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>反射可以用来在运行时动态操作Java代码，分析类能力</p>
 <p>反射的作用：</p>
 <ul>
@@ -236,8 +246,257 @@
       </tags>
   </entry>
   <entry>
+    <title>用户中心项目</title>
+    <url>/2023/03/26/Java/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/</url>
+    <content><![CDATA[<h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><p>作为其他系统的一个统一的用户管理中心，不用每一个系统都创建一个新的用户管理系统</p>
+<h1 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h1><p>三件套 + ant design pro + react + umi + ant design(组件库)</p>
+<p>后端：</p>
+<ul>
+<li>java</li>
+<li>spring （依赖注入框架，帮助管理Java对象，集成一些其他的内容）</li>
+<li>springmvc （web 框架， 提供接口访问，restful接口等能力）</li>
+<li>mybatis（持久层框架，对jdbc的封装）</li>
+<li>mybatis-plus（对mybatis的增强，不用写sql也能实现增删改查）<ul>
+<li><a href="https://baomidou.com/">https://baomidou.com/</a></li>
+</ul>
+</li>
+<li>springboot （快速启动，）</li>
+<li>mysql</li>
+</ul>
+<h1 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h1><p>初始化</p>
+<p>数据库设计</p>
+<p>登录</p>
+<p>注册</p>
+<h1 id="初始化前端"><a href="#初始化前端" class="headerlink" title="初始化前端"></a>初始化前端</h1><p><strong>初始化项目</strong></p>
+<p><strong>引入组件</strong></p>
+<p><strong>框架介绍 &#x2F; 瘦身 （在ant design pro 官网查看目录介绍）</strong></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><strong>node:internal&#x2F;crypto&#x2F;hash:71 this[kHandle] &#x3D; new _Hash(algorithm, xofLen)； 解决方法</strong></p>
+<p>​	执行yarn start 或者 npm start时出现错误：<br>​	Error: error:0308010C:digital envelope routines::unsupported</p>
+<p>​	说明node版本太高，卸载node安装低版本node</p>
+<h1 id="初始化后端"><a href="#初始化后端" class="headerlink" title="初始化后端"></a>初始化后端</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>zip压缩包 解压，cmd打开bin</p>
+<p><strong>以前安装过MySQL：</strong></p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> stop MySQL // 停止服务</span><br><span class="line">sc delete MySQL // 删除服务</span><br><span class="line">mysqld remove // 移除服务</span><br></pre></td></tr></table></figure>
+
+<p>安装MySQL:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console // 初始化</span><br><span class="line">mysqld install // 安装myql服务</span><br><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> MySQL // 启动MySQL服务</span><br><span class="line">mysql -u root -p //登录</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="引入项目框架"><a href="#引入项目框架" class="headerlink" title="引入项目框架"></a>引入项目框架</h2><p>spring boot devtools 热部署</p>
+<p>lombok 自动生成get set方法</p>
+<p>Spring Configuration Processor 支持spring的configuration properties等注解，读取属性文件时有用</p>
+<p>mysql driver</p>
+<p>redis （用到后再加）</p>
+<p>spring web 给spring项目增加web访问能力</p>
+<p>mybatis 数据访问层的框架，操作数据库，对数据库进行增删改查</p>
+<h2 id="添加功能"><a href="#添加功能" class="headerlink" title="添加功能"></a>添加功能</h2><p>user的查询：</p>
+<ul>
+<li>user对象</li>
+<li>usermapper</li>
+<li>在启动类上加上包扫描 @MapperScan </li>
+<li>测试查询</li>
+</ul>
+<h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>Junit <strong>断言</strong></p>
+<p>认为这里的结果应该是一个认定的答案 如果不是就报错</p>
+<h2 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h2><h3 id="java版本与springboot版本对应的关系"><a href="#java版本与springboot版本对应的关系" class="headerlink" title="java版本与springboot版本对应的关系"></a><strong>java版本与springboot版本对应的关系</strong></h3><table>
+<thead>
+<tr>
+<th>spring boot version</th>
+<th>java version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>springboot2.x</td>
+<td>8 or 9</td>
+</tr>
+</tbody></table>
+<h3 id="springboot配置mysql"><a href="#springboot配置mysql" class="headerlink" title="springboot配置mysql"></a><strong>springboot配置mysql</strong></h3><p>maven导入mysql依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="comment"># DataSource Config</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/user_center?useUnicode=true&amp;useSSL=false&amp;characterEncoding=utf-8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="spring-的自动注入（注解开发）原理"><a href="#spring-的自动注入（注解开发）原理" class="headerlink" title="spring 的自动注入（注解开发）原理"></a><strong>spring 的自动注入（注解开发）原理</strong></h3><p>@resource</p>
+<p>@autowrite</p>
+<h1 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h1><p>用户表： </p>
+<p>id 主键 </p>
+<p>username 昵称</p>
+<p>user_account 登录账号</p>
+<p>avatar_url 头像</p>
+<p>gender 性别</p>
+<p>user_password 密码</p>
+<p>phone 电话</p>
+<p>email 邮箱</p>
+<p>user_status 状态</p>
+<p>user_role  用户角色 0 默认 1 管理员</p>
+<hr>
+<p>下面三个字段在所有表中都应该有所记录</p>
+<p>create_time 创建时间 current_timestamp</p>
+<p>update_time 更新时间 current_timestamp on update current_timestamp</p>
+<p>is_delete 是否删除 （逻辑删除）</p>
+<p><strong>开闭原则</strong>：对拓展开放，对修改关闭</p>
+<p>truncate 清空表数据</p>
+<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h3 id="实现基本的数据库操作"><a href="#实现基本的数据库操作" class="headerlink" title="实现基本的数据库操作"></a>实现基本的数据库操作</h3><ol>
+<li>模型user对象 &#x3D;&gt; 和数据库关联</li>
+</ol>
+<p>mybatisX插件自动生成domain实体对象</p>
+<p>generateAllSetter自动生成所有对象属性设置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mybatis-plus 自动转驼峰的配置 注意</span><br></pre></td></tr></table></figure>
+
+<h3 id="注册流程"><a href="#注册流程" class="headerlink" title="注册流程"></a>注册流程</h3><ol>
+<li><p>用户输入账号密码，校验码（todo）</p>
+</li>
+<li><p>校验用户的账户、密码、校验密码是否合规</p>
+<ol>
+<li>账户不小于6位</li>
+<li>密码不小于8位</li>
+<li>账户不能重复</li>
+<li>账户不包含特殊字符</li>
+<li>密码和校验密码相同</li>
+</ol>
+</li>
+<li><p>对密码进行加密</p>
+</li>
+<li><p>向数据库插入用户数据</p>
+<p>工具包：apache.common.lang3， 提供了很多重用的公共方法</p>
+</li>
+</ol>
+<p>流程中注意对性能的处理，比如账户不能重复中会进行查库的操作可以放到最后进行</p>
+<p>单元测试</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">userAccount</span> <span class="operator">=</span> <span class="string">&quot;sc&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">userPassword</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">checkPassword</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">long</span> <span class="variable">l</span> <span class="operator">=</span> userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 账户小于6位</span></span><br><span class="line">        userPassword = <span class="string">&quot;123456&quot;</span>;</span><br><span class="line">        checkPassword = <span class="string">&quot;1234567&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 密码不相等</span></span><br><span class="line">        userAccount = <span class="string">&quot;shangchun！&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 密码小于8位</span></span><br><span class="line">        userPassword = <span class="string">&quot;1234567&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 账号不符合规范</span></span><br><span class="line">        userPassword = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">        checkPassword = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        userAccount = <span class="string">&quot;shangchun&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br></pre></td></tr></table></figure>
+
+<h3 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h3><p>接受参数：用户账户，密码</p>
+<p>请求类型：POST</p>
+<p>返回值：用户信息（<strong>脱敏</strong>）</p>
+<h4 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h4><ol>
+<li><p>校验用户账户和密码是否合法</p>
+</li>
+<li><p>校验密码是否输入正确（之后可以做限流（看一下最近这个账户登录过多少次，如果登录次数太多，限制一下））</p>
+<p>逻辑删除</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">logic-delete-value:</span> <span class="number">1</span> <span class="comment"># 逻辑已删除值(默认为 1)</span></span><br><span class="line">      <span class="attr">logic-not-delete-value:</span> <span class="number">0</span> <span class="comment"># 逻辑未删除值(默认为 0)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="comment">// 这个注解可以使用log</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>记录用户的登录态（session），存储到服务器上（用SpringBoot框架封装的服务器tomcat记录）</p>
+</li>
+<li><p>返回用户信息（脱敏）</p>
+</li>
+</ol>
+<h4 id="如何知道是哪个用户登录-了"><a href="#如何知道是哪个用户登录-了" class="headerlink" title="如何知道是哪个用户登录 了"></a>如何知道是哪个用户登录 了</h4><p>（javaweb）</p>
+<ol>
+<li>链接服务器端后，获得一个session状态返回给前端</li>
+<li>登录成功后，得到登录成功的session，给session设置一些值（比如用户信息），返回给前端一个设置cookie的命令</li>
+<li>前端设置cookie到浏览器</li>
+<li>前端再次请求后端的时候，再请求头中带上cookie去请求</li>
+<li>从session中取出基于该session存储的变量</li>
+</ol>
+<h3 id="用户管理接口"><a href="#用户管理接口" class="headerlink" title="用户管理接口"></a>用户管理接口</h3><p>用户注册</p>
+<p>用户登录</p>
+<p><em><strong>鉴权</strong></em>：对某些操作获取用户的权限值查看是否可以使用</p>
+<p>查询用户 (可以根据username查找)</p>
+<p>删除用户 (id)</p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a><strong>测试</strong></h4><p>IDEA: Tools - &gt; Http Client &#x2F; 直接点击controller边上的按钮</p>
+<p>PostMan(没那么方便)</p>
+<h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><p>修改 login 请求路径</p>
+<h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><p>正向代理：替客户端发送请求</p>
+<p>反向代理：替服务器接受请求（代理服务器进行负载均衡）</p>
+<p>umi 中对 request 请求的配置</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="attr">request</span>: <span class="title class_">RequestConfig</span> = &#123;</span><br><span class="line">  <span class="comment">// prefix: &#x27;http://localhost:8080&#x27;,</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>ant design pro 中的代理</p>
+<p><img src="H:\Users\zx065\Desktop\Java\用户中心.assets\image-20230228142352616.png" alt="image-20230228142352616"></p>
+<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><h2 id="前端-1"><a href="#前端-1" class="headerlink" title="前端"></a>前端</h2><p>添加注册路由</p>
+<p>修改重定向</p>
+<blockquote>
+<p>app.tsx 是全局初始和启动的入口</p>
+</blockquote>
+<p>前端后端都要做校验的原因：用户可以绕过前端直接向后端发起请求</p>
+<h2 id="待优化-todo"><a href="#待优化-todo" class="headerlink" title="待优化 todo"></a>待优化 todo</h2><p>前端密码提示优化</p>
+<p>用户名重复，没有友好的提示</p>
+<p>用户注销</p>
+<h1 id="获取用户登录态"><a href="#获取用户登录态" class="headerlink" title="获取用户登录态"></a>获取用户登录态</h1><p>用户接口</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>项目</tag>
+        <tag>Java</tag>
+        <tag>MyBatis</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring编程思想</title>
+    <url>/2023/03/26/Java/Spring/</url>
+    <content><![CDATA[<h1 id="Spring-IOC"><a href="#Spring-IOC" class="headerlink" title="Spring IOC"></a>Spring IOC</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>IOC （inversion of control）控制反转，是一种编程思想，对面对对象的补充，通过将对象的创建，组装，管理反转在框架中进行，实现低耦合和可重用性</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>创建工厂</p>
+<p>读取配置文件</p>
+<p>通过配置文件创建实例</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol>
+<li>三层架构 Dao - Service - Controller</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloDaoImpl</span> <span class="keyword">implements</span> <span class="title class_">HelloDao</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">findAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Arrays.asList(<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">HelloService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">HelloDao</span> <span class="variable">helloDao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HelloDaoImpl</span>();</span><br><span class="line">     </span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">findAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> helloDao.findAll();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/hello&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">HelloService</span> <span class="variable">helloService</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HelloServiceImpl</span>();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        resp.getWriter().write(<span class="string">&quot;spring&quot;</span>  + helloService.findAll());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>当需求发生改变时，代码需要更改，要重写接口代码</p>
+<p><strong>解决：</strong> 使用静态工厂创建特定的类，不用在Service中写死代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BeanFactory</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> HelloDao <span class="title function_">getDao</span><span class="params">()</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">HelloDaoImpl</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="type">HelloDao</span> <span class="variable">helloDao</span> <span class="operator">=</span> BeanFactory.getDao();</span><br></pre></td></tr></table></figure>
+
+<p><strong>问题：</strong>需求发生改变时 仍然需要修改代码</p>
+<p>解决：使用反射从配置文件中获取具体的类</p>
+<ol>
+<li><p>定义配置文件</p>
+</li>
+<li><p>程序中读取配置文件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BeanFactory</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 使用工厂创建特定的类，不用写死在Service中</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * version1  public static HelloDao getDao()&#123;</span></span><br><span class="line"><span class="comment">     *         return new HelloDaoImpl();</span></span><br><span class="line"><span class="comment">     *     &#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title function_">getDao</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">helloDao</span> <span class="operator">=</span> properties.getProperty(<span class="string">&quot;helloDao&quot;</span>);</span><br><span class="line">        <span class="comment">// 利用反射创建对象</span></span><br><span class="line">        <span class="comment">// 通过更改配置文件就可以解决代码不能切换的问题</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class&lt;?&gt; aClass = Class.forName(helloDao);</span><br><span class="line">            <span class="keyword">return</span> aClass.getConstructor( <span class="literal">null</span>).newInstance();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException | InvocationTargetException | InstantiationException | IllegalAccessException |</span><br><span class="line">                 NoSuchMethodException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 读取配置文件</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Properties properties;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        properties = <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            properties.load(BeanFactory.class.getClassLoader().getResourceAsStream(<span class="string">&quot;application.properties&quot;</span>));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取</p>
+<p>之后使用外部配置修改解决代码切换的问题</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>创建的对象不是单例</strong></p>
+<p>重复使用对象会出现使用很多个实例的问题</p>
+<p>解决：使用 Map 存放创建的对象，同时加锁保证线程安全</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title function_">getDao</span><span class="params">(String beanName)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!cache.containsKey(beanName))&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (BeanFactory.class)&#123;</span><br><span class="line">                <span class="keyword">if</span> (!cache.containsKey(beanName))&#123;</span><br><span class="line">                    <span class="comment">// 利用反射创建对象</span></span><br><span class="line">                    <span class="comment">// 通过更改配置文件就可以解决代码不能切换的问题</span></span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="type">String</span> <span class="variable">helloDao</span> <span class="operator">=</span> properties.getProperty(beanName);</span><br><span class="line">                        Class&lt;?&gt; aClass = Class.forName(helloDao);</span><br><span class="line">                        <span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> aClass.getConstructor(<span class="literal">null</span>).newInstance();</span><br><span class="line">                        cache.put(beanName, o);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (ClassNotFoundException | InvocationTargetException | InstantiationException | IllegalAccessException |</span><br><span class="line">                             NoSuchMethodException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cache.get(beanName);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>放弃创造对象的权限，将权限交给 BeanFactory</p>
+<p>这种由别人或者对象控制的思想就是 <strong>IOC 控制反转</strong></p>
+<h1 id="基于注解的-IOC"><a href="#基于注解的-IOC" class="headerlink" title="基于注解的 IOC"></a>基于注解的 IOC</h1><p>通过配置文件获取还是很麻烦，根据注解创建 Bean 实例，通过注解获取到 Bean 实例更为方便</p>
+<h2 id="流程-1"><a href="#流程-1" class="headerlink" title="流程"></a>流程</h2><p><img src="https://article-images.zsxq.com/Fr5lKUGA910wfJcrKhb7wMitvUKy" alt="img"></p>
+<ol>
+<li><p>扫描包</p>
+</li>
+<li><p>获取包下添加了注解的类，获取其中的组件 Class 和 BeanName 封装成 BeanDefination 存入集合，这个集合就是 IOC 自动装载的原材料</p>
+</li>
+<li><p>通过反射机制创建对象，将动态创建的对象以 Map 的形式存入缓存</p>
+</li>
+<li><p>通过 BeanName 取出对应的 Bean, 使用反射执行方法</p>
+</li>
+</ol>
+<h2 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 容器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyAnnotationConfigApplicationContext</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> HashMap&lt;String, Object&gt; ioc =  <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">getBean</span><span class="params">(String beanName)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> ioc.get(beanName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pack</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyAnnotationConfigApplicationContext</span><span class="params">(String pack)</span> &#123;</span><br><span class="line">        <span class="comment">//1. 扫描包</span></span><br><span class="line">        <span class="comment">//2. 获取包下添加了注解的类，获取其中的组件 Class 和 BeanName 封装成 BeanDefination 存入集合，这个集合就是 IOC 自动装载的原材料</span></span><br><span class="line">        Set&lt;BeanDefinition&gt; beanDefinition = findBeanDefinition(pack);</span><br><span class="line">        <span class="comment">//3. 通过反射机制创建对象，将动态创建的对象以 Map 的形式存入缓存</span></span><br><span class="line">        createObject(beanDefinition);</span><br><span class="line">        <span class="comment">// 自动装载</span></span><br><span class="line">		autowireObject(beanDefinition);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">autowireObject</span><span class="params">(Set&lt;BeanDefinition&gt; beanDefinitions)</span> &#123;</span><br><span class="line">        <span class="comment">//获取注入的集合</span></span><br><span class="line">        Iterator&lt;BeanDefinition&gt; iterator = beanDefinitions.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            <span class="comment">//拿到bean 信息</span></span><br><span class="line">            <span class="type">BeanDefinition</span> <span class="variable">beanDefinition</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            <span class="comment">//获取当前需要自动装配的对象</span></span><br><span class="line">            <span class="type">Class</span> <span class="variable">clazz</span> <span class="operator">=</span> beanDefinition.getBeanClass();</span><br><span class="line">            <span class="comment">//拿到全部属性</span></span><br><span class="line">            Field[] declaredFields = clazz.getDeclaredFields();</span><br><span class="line">            <span class="keyword">for</span> (Field field : declaredFields) &#123;</span><br><span class="line">                <span class="type">Autowired</span> <span class="variable">annotation</span> <span class="operator">=</span> field.getAnnotation(Autowired.class);</span><br><span class="line">                <span class="keyword">if</span> (annotation != <span class="literal">null</span>) &#123;</span><br><span class="line">                    <span class="type">Qualifer</span> <span class="variable">qualifer</span> <span class="operator">=</span> field.getAnnotation(Qualifer.class);</span><br><span class="line">                    <span class="keyword">if</span> (qualifer != <span class="literal">null</span>) &#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="comment">// 根据字段的名字获取</span></span><br><span class="line">                            <span class="type">String</span> <span class="variable">beanName</span> <span class="operator">=</span> qualifer.value();</span><br><span class="line">                            <span class="type">Object</span> <span class="variable">bean</span> <span class="operator">=</span> getBean(beanName);</span><br><span class="line">                            <span class="type">String</span> <span class="variable">fieldName</span> <span class="operator">=</span> field.getName();</span><br><span class="line">                            <span class="type">String</span> <span class="variable">mothedName</span> <span class="operator">=</span> <span class="string">&quot;set&quot;</span> + fieldName.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + fieldName.substring(<span class="number">1</span>);</span><br><span class="line">                            <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> clazz.getMethod(mothedName, field.getType());</span><br><span class="line">                            <span class="type">Object</span> <span class="variable">object</span> <span class="operator">=</span> getBean(beanDefinition.getBeanName());</span><br><span class="line">                            System.out.println(bean);</span><br><span class="line">                            method.invoke(object, bean);</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) &#123;</span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="comment">//byType</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">createObject</span><span class="params">(Set&lt;BeanDefinition&gt; beanDefinitions)</span> &#123;</span><br><span class="line">        Iterator&lt;BeanDefinition&gt; iterator = beanDefinitions.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            <span class="type">BeanDefinition</span> <span class="variable">beanDefinition</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            <span class="type">Class</span> <span class="variable">beanClass</span> <span class="operator">=</span> beanDefinition.getBeanClass();</span><br><span class="line">            <span class="type">String</span> <span class="variable">beanName</span> <span class="operator">=</span> beanDefinition.getBeanName();</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> beanClass.getConstructor().newInstance();</span><br><span class="line">                <span class="comment">// 属性字段 设置值</span></span><br><span class="line">                Field[] declaredFields = beanClass.getDeclaredFields();</span><br><span class="line">                <span class="keyword">for</span> (Field declaredField : declaredFields) &#123;</span><br><span class="line">                    <span class="type">Value</span> <span class="variable">valueAnnotation</span> <span class="operator">=</span> declaredField.getAnnotation(Value.class);</span><br><span class="line">                    <span class="keyword">if</span> (valueAnnotation != <span class="literal">null</span>) &#123;</span><br><span class="line">                        <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> valueAnnotation.value();</span><br><span class="line">                        <span class="type">String</span> <span class="variable">fieldName</span> <span class="operator">=</span> declaredField.getName();</span><br><span class="line">                        <span class="comment">// set方法</span></span><br><span class="line">                        <span class="type">String</span> <span class="variable">methodName</span> <span class="operator">=</span> <span class="string">&quot;set&quot;</span> + fieldName.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + fieldName.substring(<span class="number">1</span>);</span><br><span class="line">                        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> beanClass.getMethod(methodName, declaredField.getType());</span><br><span class="line">                        <span class="comment">//数据类型转换</span></span><br><span class="line">                        <span class="type">Object</span> <span class="variable">val</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">                        <span class="comment">//可能会有很多类型 篇幅过长</span></span><br><span class="line">                        <span class="keyword">switch</span> (declaredField.getType().getName()) &#123;</span><br><span class="line">                            <span class="keyword">case</span> <span class="string">&quot;java.lang.Integer&quot;</span>:</span><br><span class="line">                                val = Integer.parseInt(value);</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            <span class="keyword">case</span> <span class="string">&quot;java.lang.String&quot;</span>:</span><br><span class="line">                                val = value;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            <span class="keyword">case</span> <span class="string">&quot;java.lang.Float&quot;</span>:</span><br><span class="line">                                val = Float.parseFloat(value);</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="comment">// 执行</span></span><br><span class="line">                        method.invoke(o, val);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                ioc.put(beanName, o);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InstantiationException | IllegalAccessException | InvocationTargetException |</span><br><span class="line">                     NoSuchMethodException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 扫描包中符合条件的类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pack</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> Set&lt;BeanDefinition&gt; <span class="title function_">findBeanDefinition</span><span class="params">(String pack)</span>&#123;</span><br><span class="line">        <span class="comment">// 1. 获取包下所有类</span></span><br><span class="line">        HashSet&lt;BeanDefinition&gt; beanDefinitions = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        Set&lt;Class&gt; classes = getClasses(pack);</span><br><span class="line">        Iterator&lt;Class&gt; iterator = classes.iterator();</span><br><span class="line">        <span class="comment">// 2. 遍历类，找到添加了注解的类</span></span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            <span class="type">Class</span> <span class="variable">clazz</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            <span class="type">Component</span> <span class="variable">annotation</span> <span class="operator">=</span> (Component) clazz.getAnnotation(Component.class);</span><br><span class="line">            <span class="keyword">if</span> (annotation != <span class="literal">null</span> ) &#123;</span><br><span class="line">                <span class="comment">// 获取Component的值</span></span><br><span class="line">                <span class="type">String</span> <span class="variable">beanName</span> <span class="operator">=</span> annotation.value();</span><br><span class="line">                <span class="keyword">if</span> (<span class="string">&quot;&quot;</span>.equals(beanName)) &#123;</span><br><span class="line">                    <span class="comment">// 获取类名</span></span><br><span class="line">                    beanName = clazz.getSimpleName();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">BeanDefinition</span> <span class="variable">beanDefinition</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BeanDefinition</span>(clazz, beanName);</span><br><span class="line">                beanDefinitions.add(beanDefinition);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 3. 将这些类封装成BeanDefinition装载到集合中</span></span><br><span class="line">        <span class="keyword">return</span> beanDefinitions;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * get classes</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pack</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> Set&lt;Class&gt; <span class="title function_">getClasses</span><span class="params">(String pack)</span>&#123;</span><br><span class="line">        Set&lt;Class&gt; classes = <span class="keyword">new</span> <span class="title class_">LinkedHashSet</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// get package name and replace to url</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">packageName</span> <span class="operator">=</span> pack;</span><br><span class="line">        <span class="type">String</span> <span class="variable">packageDirName</span> <span class="operator">=</span> packageName.replace(<span class="string">&quot;.&quot;</span>, <span class="string">&quot;/&quot;</span>);</span><br><span class="line">        Enumeration&lt;URL&gt; dirs;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            dirs = Thread.currentThread().getContextClassLoader().getResources(packageDirName);</span><br><span class="line">            <span class="keyword">while</span> (dirs.hasMoreElements()) &#123;</span><br><span class="line">                <span class="comment">// get next element</span></span><br><span class="line">                <span class="type">URL</span> <span class="variable">url</span> <span class="operator">=</span> dirs.nextElement();</span><br><span class="line">                <span class="type">String</span> <span class="variable">protocol</span> <span class="operator">=</span> url.getProtocol();</span><br><span class="line">                <span class="comment">// if it is saved at server like a file</span></span><br><span class="line">                <span class="keyword">if</span> (<span class="string">&quot;file&quot;</span>.equals(protocol)) &#123;</span><br><span class="line">                    <span class="type">String</span> <span class="variable">decode</span> <span class="operator">=</span> URLDecoder.decode(url.getFile(), <span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">                    findClassesInPackageByFile(packageName, decode, <span class="literal">true</span>, classes);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;jar&quot;</span>.equals(protocol)) &#123;</span><br><span class="line">                    <span class="comment">// 如果是jar包文件</span></span><br><span class="line">                    <span class="comment">// 定义一个JarFile</span></span><br><span class="line">                    System.out.println(<span class="string">&quot;jar类型的扫描&quot;</span>);</span><br><span class="line">                    JarFile jar;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="comment">// 获取jar</span></span><br><span class="line">                        jar = ((JarURLConnection) url.openConnection()).getJarFile();</span><br><span class="line">                        <span class="comment">// 从此jar包 得到一个枚举类</span></span><br><span class="line">                        Enumeration&lt;JarEntry&gt; entries = jar.entries();</span><br><span class="line">                        findClassesInPackageByJar(packageName, entries, packageDirName, <span class="literal">true</span>, classes);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                        <span class="comment">// log.error(&quot;在扫描用户定义视图时从jar包获取文件出错&quot;);</span></span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> classes;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">findClassesInPackageByFile</span><span class="params">(String packageName, String packagePath, <span class="keyword">final</span> <span class="type">boolean</span> recursive, Set&lt;Class&gt; classes)</span>&#123;</span><br><span class="line">        <span class="type">File</span> <span class="variable">dir</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(packagePath);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!dir.exists() || !dir.isDirectory())&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 获取目录下的目录和以.class结尾的文件</span></span><br><span class="line">        File[] dirFiles = dir.listFiles(file -&gt; (recursive &amp;&amp; file.isDirectory()) || file.getName().endsWith(<span class="string">&quot;.class&quot;</span>));</span><br><span class="line">        <span class="keyword">for</span> (File dirFile : dirFiles) &#123;</span><br><span class="line">            <span class="keyword">if</span>(dirFile.isDirectory()) &#123;</span><br><span class="line">                <span class="comment">// 目录继续往里找</span></span><br><span class="line">                findClassesInPackageByFile(packageName + <span class="string">&quot;.&quot;</span> + dirFile.getName(), dirFile.getAbsolutePath(), recursive, classes);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 去除.class</span></span><br><span class="line">                <span class="type">String</span> <span class="variable">classFileName</span> <span class="operator">=</span> dirFile.getName().substring(<span class="number">0</span>, dirFile.getName().length() - <span class="number">6</span>);</span><br><span class="line">                <span class="comment">// 添加进class</span></span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    classes.add(Thread.currentThread().getContextClassLoader().loadClass(packageName + <span class="string">&quot;.&quot;</span> + classFileName));</span><br><span class="line">                &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">findClassesInPackageByJar</span><span class="params">(String packageName, Enumeration&lt;JarEntry&gt; entries, String packageDirName, <span class="keyword">final</span> <span class="type">boolean</span> recursive, Set&lt;Class&gt; classes)</span> &#123;</span><br><span class="line">        <span class="comment">// 同样的进行循环迭代</span></span><br><span class="line">        <span class="keyword">while</span> (entries.hasMoreElements()) &#123;</span><br><span class="line">            <span class="comment">// 获取jar里的一个实体 可以是目录 和一些jar包里的其他文件 如META-INF等文件</span></span><br><span class="line">            <span class="type">JarEntry</span> <span class="variable">entry</span> <span class="operator">=</span> entries.nextElement();</span><br><span class="line">            <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> entry.getName();</span><br><span class="line">            <span class="comment">// 如果是以/开头的</span></span><br><span class="line">            <span class="keyword">if</span> (name.charAt(<span class="number">0</span>) == <span class="string">&#x27;/&#x27;</span>) &#123;</span><br><span class="line">                <span class="comment">// 获取后面的字符串</span></span><br><span class="line">                name = name.substring(<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 如果前半部分和定义的包名相同</span></span><br><span class="line">            <span class="keyword">if</span> (name.startsWith(packageDirName)) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">idx</span> <span class="operator">=</span> name.lastIndexOf(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">                <span class="comment">// 如果以&quot;/&quot;结尾 是一个包</span></span><br><span class="line">                <span class="keyword">if</span> (idx != -<span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="comment">// 获取包名 把&quot;/&quot;替换成&quot;.&quot;</span></span><br><span class="line">                    packageName = name.substring(<span class="number">0</span>, idx).replace(<span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 如果可以迭代下去 并且是一个包</span></span><br><span class="line">                <span class="keyword">if</span> ((idx != -<span class="number">1</span>) || recursive) &#123;</span><br><span class="line">                    <span class="comment">// 如果是一个.class文件 而且不是目录</span></span><br><span class="line">                    <span class="keyword">if</span> (name.endsWith(<span class="string">&quot;.class&quot;</span>) &amp;&amp; !entry.isDirectory()) &#123;</span><br><span class="line">                        <span class="comment">// 去掉后面的&quot;.class&quot; 获取真正的类名</span></span><br><span class="line">                        <span class="type">String</span> <span class="variable">className</span> <span class="operator">=</span> name.substring(packageName.length() + <span class="number">1</span>, name.length() - <span class="number">6</span>);</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="comment">// 添加到classes</span></span><br><span class="line">                            classes.add(Class.forName(packageName + <span class="string">&#x27;.&#x27;</span> + className));</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">                            <span class="comment">// .error(&quot;添加用户自定义视图类错误 找不到此类的.class文件&quot;);</span></span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Golang</title>
-    <url>/2023/03/26/Golang/</url>
+    <url>/2023/03/26/Golang/Golang/</url>
     <content><![CDATA[<h1 id="包、变量和函数"><a href="#包、变量和函数" class="headerlink" title="包、变量和函数"></a>包、变量和函数</h1><p>每个 Go 程序都是由包构成的。</p>
 <p>程序从 <code>main</code> 包开始运行。</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;math&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
@@ -647,257 +906,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring编程思想</title>
-    <url>/2023/03/26/Spring/</url>
-    <content><![CDATA[<h1 id="Spring-IOC"><a href="#Spring-IOC" class="headerlink" title="Spring IOC"></a>Spring IOC</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>IOC （inversion of control）控制反转，是一种编程思想，对面对对象的补充，通过将对象的创建，组装，管理反转在框架中进行，实现低耦合和可重用性</p>
-<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>创建工厂</p>
-<p>读取配置文件</p>
-<p>通过配置文件创建实例</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol>
-<li>三层架构 Dao - Service - Controller</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloDaoImpl</span> <span class="keyword">implements</span> <span class="title class_">HelloDao</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">findAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Arrays.asList(<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">HelloService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">HelloDao</span> <span class="variable">helloDao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HelloDaoImpl</span>();</span><br><span class="line">     </span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">findAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> helloDao.findAll();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/hello&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">HelloService</span> <span class="variable">helloService</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HelloServiceImpl</span>();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        resp.getWriter().write(<span class="string">&quot;spring&quot;</span>  + helloService.findAll());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><p>当需求发生改变时，代码需要更改，要重写接口代码</p>
-<p><strong>解决：</strong> 使用静态工厂创建特定的类，不用在Service中写死代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BeanFactory</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> HelloDao <span class="title function_">getDao</span><span class="params">()</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">HelloDaoImpl</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="type">HelloDao</span> <span class="variable">helloDao</span> <span class="operator">=</span> BeanFactory.getDao();</span><br></pre></td></tr></table></figure>
-
-<p><strong>问题：</strong>需求发生改变时 仍然需要修改代码</p>
-<p>解决：使用反射从配置文件中获取具体的类</p>
-<ol>
-<li><p>定义配置文件</p>
-</li>
-<li><p>程序中读取配置文件</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BeanFactory</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 使用工厂创建特定的类，不用写死在Service中</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * version1  public static HelloDao getDao()&#123;</span></span><br><span class="line"><span class="comment">     *         return new HelloDaoImpl();</span></span><br><span class="line"><span class="comment">     *     &#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title function_">getDao</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">helloDao</span> <span class="operator">=</span> properties.getProperty(<span class="string">&quot;helloDao&quot;</span>);</span><br><span class="line">        <span class="comment">// 利用反射创建对象</span></span><br><span class="line">        <span class="comment">// 通过更改配置文件就可以解决代码不能切换的问题</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class&lt;?&gt; aClass = Class.forName(helloDao);</span><br><span class="line">            <span class="keyword">return</span> aClass.getConstructor( <span class="literal">null</span>).newInstance();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException | InvocationTargetException | InstantiationException | IllegalAccessException |</span><br><span class="line">                 NoSuchMethodException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 读取配置文件</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Properties properties;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        properties = <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            properties.load(BeanFactory.class.getClassLoader().getResourceAsStream(<span class="string">&quot;application.properties&quot;</span>));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取</p>
-<p>之后使用外部配置修改解决代码切换的问题</p>
-</li>
-</ol>
-</li>
-</ol>
-<p><strong>创建的对象不是单例</strong></p>
-<p>重复使用对象会出现使用很多个实例的问题</p>
-<p>解决：使用 Map 存放创建的对象，同时加锁保证线程安全</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title function_">getDao</span><span class="params">(String beanName)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!cache.containsKey(beanName))&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (BeanFactory.class)&#123;</span><br><span class="line">                <span class="keyword">if</span> (!cache.containsKey(beanName))&#123;</span><br><span class="line">                    <span class="comment">// 利用反射创建对象</span></span><br><span class="line">                    <span class="comment">// 通过更改配置文件就可以解决代码不能切换的问题</span></span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="type">String</span> <span class="variable">helloDao</span> <span class="operator">=</span> properties.getProperty(beanName);</span><br><span class="line">                        Class&lt;?&gt; aClass = Class.forName(helloDao);</span><br><span class="line">                        <span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> aClass.getConstructor(<span class="literal">null</span>).newInstance();</span><br><span class="line">                        cache.put(beanName, o);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (ClassNotFoundException | InvocationTargetException | InstantiationException | IllegalAccessException |</span><br><span class="line">                             NoSuchMethodException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cache.get(beanName);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>放弃创造对象的权限，将权限交给 BeanFactory</p>
-<p>这种由别人或者对象控制的思想就是 <strong>IOC 控制反转</strong></p>
-<h1 id="基于注解的-IOC"><a href="#基于注解的-IOC" class="headerlink" title="基于注解的 IOC"></a>基于注解的 IOC</h1><p>通过配置文件获取还是很麻烦，根据注解创建 Bean 实例，通过注解获取到 Bean 实例更为方便</p>
-<h2 id="流程-1"><a href="#流程-1" class="headerlink" title="流程"></a>流程</h2><p><img src="https://article-images.zsxq.com/Fr5lKUGA910wfJcrKhb7wMitvUKy" alt="img"></p>
-<ol>
-<li><p>扫描包</p>
-</li>
-<li><p>获取包下添加了注解的类，获取其中的组件 Class 和 BeanName 封装成 BeanDefination 存入集合，这个集合就是 IOC 自动装载的原材料</p>
-</li>
-<li><p>通过反射机制创建对象，将动态创建的对象以 Map 的形式存入缓存</p>
-</li>
-<li><p>通过 BeanName 取出对应的 Bean, 使用反射执行方法</p>
-</li>
-</ol>
-<h2 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 容器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyAnnotationConfigApplicationContext</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> HashMap&lt;String, Object&gt; ioc =  <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">getBean</span><span class="params">(String beanName)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> ioc.get(beanName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pack</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyAnnotationConfigApplicationContext</span><span class="params">(String pack)</span> &#123;</span><br><span class="line">        <span class="comment">//1. 扫描包</span></span><br><span class="line">        <span class="comment">//2. 获取包下添加了注解的类，获取其中的组件 Class 和 BeanName 封装成 BeanDefination 存入集合，这个集合就是 IOC 自动装载的原材料</span></span><br><span class="line">        Set&lt;BeanDefinition&gt; beanDefinition = findBeanDefinition(pack);</span><br><span class="line">        <span class="comment">//3. 通过反射机制创建对象，将动态创建的对象以 Map 的形式存入缓存</span></span><br><span class="line">        createObject(beanDefinition);</span><br><span class="line">        <span class="comment">// 自动装载</span></span><br><span class="line">		autowireObject(beanDefinition);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">autowireObject</span><span class="params">(Set&lt;BeanDefinition&gt; beanDefinitions)</span> &#123;</span><br><span class="line">        <span class="comment">//获取注入的集合</span></span><br><span class="line">        Iterator&lt;BeanDefinition&gt; iterator = beanDefinitions.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            <span class="comment">//拿到bean 信息</span></span><br><span class="line">            <span class="type">BeanDefinition</span> <span class="variable">beanDefinition</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            <span class="comment">//获取当前需要自动装配的对象</span></span><br><span class="line">            <span class="type">Class</span> <span class="variable">clazz</span> <span class="operator">=</span> beanDefinition.getBeanClass();</span><br><span class="line">            <span class="comment">//拿到全部属性</span></span><br><span class="line">            Field[] declaredFields = clazz.getDeclaredFields();</span><br><span class="line">            <span class="keyword">for</span> (Field field : declaredFields) &#123;</span><br><span class="line">                <span class="type">Autowired</span> <span class="variable">annotation</span> <span class="operator">=</span> field.getAnnotation(Autowired.class);</span><br><span class="line">                <span class="keyword">if</span> (annotation != <span class="literal">null</span>) &#123;</span><br><span class="line">                    <span class="type">Qualifer</span> <span class="variable">qualifer</span> <span class="operator">=</span> field.getAnnotation(Qualifer.class);</span><br><span class="line">                    <span class="keyword">if</span> (qualifer != <span class="literal">null</span>) &#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="comment">// 根据字段的名字获取</span></span><br><span class="line">                            <span class="type">String</span> <span class="variable">beanName</span> <span class="operator">=</span> qualifer.value();</span><br><span class="line">                            <span class="type">Object</span> <span class="variable">bean</span> <span class="operator">=</span> getBean(beanName);</span><br><span class="line">                            <span class="type">String</span> <span class="variable">fieldName</span> <span class="operator">=</span> field.getName();</span><br><span class="line">                            <span class="type">String</span> <span class="variable">mothedName</span> <span class="operator">=</span> <span class="string">&quot;set&quot;</span> + fieldName.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + fieldName.substring(<span class="number">1</span>);</span><br><span class="line">                            <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> clazz.getMethod(mothedName, field.getType());</span><br><span class="line">                            <span class="type">Object</span> <span class="variable">object</span> <span class="operator">=</span> getBean(beanDefinition.getBeanName());</span><br><span class="line">                            System.out.println(bean);</span><br><span class="line">                            method.invoke(object, bean);</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) &#123;</span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="comment">//byType</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">createObject</span><span class="params">(Set&lt;BeanDefinition&gt; beanDefinitions)</span> &#123;</span><br><span class="line">        Iterator&lt;BeanDefinition&gt; iterator = beanDefinitions.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            <span class="type">BeanDefinition</span> <span class="variable">beanDefinition</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            <span class="type">Class</span> <span class="variable">beanClass</span> <span class="operator">=</span> beanDefinition.getBeanClass();</span><br><span class="line">            <span class="type">String</span> <span class="variable">beanName</span> <span class="operator">=</span> beanDefinition.getBeanName();</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> beanClass.getConstructor().newInstance();</span><br><span class="line">                <span class="comment">// 属性字段 设置值</span></span><br><span class="line">                Field[] declaredFields = beanClass.getDeclaredFields();</span><br><span class="line">                <span class="keyword">for</span> (Field declaredField : declaredFields) &#123;</span><br><span class="line">                    <span class="type">Value</span> <span class="variable">valueAnnotation</span> <span class="operator">=</span> declaredField.getAnnotation(Value.class);</span><br><span class="line">                    <span class="keyword">if</span> (valueAnnotation != <span class="literal">null</span>) &#123;</span><br><span class="line">                        <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> valueAnnotation.value();</span><br><span class="line">                        <span class="type">String</span> <span class="variable">fieldName</span> <span class="operator">=</span> declaredField.getName();</span><br><span class="line">                        <span class="comment">// set方法</span></span><br><span class="line">                        <span class="type">String</span> <span class="variable">methodName</span> <span class="operator">=</span> <span class="string">&quot;set&quot;</span> + fieldName.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + fieldName.substring(<span class="number">1</span>);</span><br><span class="line">                        <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> beanClass.getMethod(methodName, declaredField.getType());</span><br><span class="line">                        <span class="comment">//数据类型转换</span></span><br><span class="line">                        <span class="type">Object</span> <span class="variable">val</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">                        <span class="comment">//可能会有很多类型 篇幅过长</span></span><br><span class="line">                        <span class="keyword">switch</span> (declaredField.getType().getName()) &#123;</span><br><span class="line">                            <span class="keyword">case</span> <span class="string">&quot;java.lang.Integer&quot;</span>:</span><br><span class="line">                                val = Integer.parseInt(value);</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            <span class="keyword">case</span> <span class="string">&quot;java.lang.String&quot;</span>:</span><br><span class="line">                                val = value;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            <span class="keyword">case</span> <span class="string">&quot;java.lang.Float&quot;</span>:</span><br><span class="line">                                val = Float.parseFloat(value);</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="comment">// 执行</span></span><br><span class="line">                        method.invoke(o, val);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                ioc.put(beanName, o);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InstantiationException | IllegalAccessException | InvocationTargetException |</span><br><span class="line">                     NoSuchMethodException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 扫描包中符合条件的类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pack</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> Set&lt;BeanDefinition&gt; <span class="title function_">findBeanDefinition</span><span class="params">(String pack)</span>&#123;</span><br><span class="line">        <span class="comment">// 1. 获取包下所有类</span></span><br><span class="line">        HashSet&lt;BeanDefinition&gt; beanDefinitions = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        Set&lt;Class&gt; classes = getClasses(pack);</span><br><span class="line">        Iterator&lt;Class&gt; iterator = classes.iterator();</span><br><span class="line">        <span class="comment">// 2. 遍历类，找到添加了注解的类</span></span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            <span class="type">Class</span> <span class="variable">clazz</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            <span class="type">Component</span> <span class="variable">annotation</span> <span class="operator">=</span> (Component) clazz.getAnnotation(Component.class);</span><br><span class="line">            <span class="keyword">if</span> (annotation != <span class="literal">null</span> ) &#123;</span><br><span class="line">                <span class="comment">// 获取Component的值</span></span><br><span class="line">                <span class="type">String</span> <span class="variable">beanName</span> <span class="operator">=</span> annotation.value();</span><br><span class="line">                <span class="keyword">if</span> (<span class="string">&quot;&quot;</span>.equals(beanName)) &#123;</span><br><span class="line">                    <span class="comment">// 获取类名</span></span><br><span class="line">                    beanName = clazz.getSimpleName();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">BeanDefinition</span> <span class="variable">beanDefinition</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BeanDefinition</span>(clazz, beanName);</span><br><span class="line">                beanDefinitions.add(beanDefinition);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 3. 将这些类封装成BeanDefinition装载到集合中</span></span><br><span class="line">        <span class="keyword">return</span> beanDefinitions;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * get classes</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pack</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> Set&lt;Class&gt; <span class="title function_">getClasses</span><span class="params">(String pack)</span>&#123;</span><br><span class="line">        Set&lt;Class&gt; classes = <span class="keyword">new</span> <span class="title class_">LinkedHashSet</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// get package name and replace to url</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">packageName</span> <span class="operator">=</span> pack;</span><br><span class="line">        <span class="type">String</span> <span class="variable">packageDirName</span> <span class="operator">=</span> packageName.replace(<span class="string">&quot;.&quot;</span>, <span class="string">&quot;/&quot;</span>);</span><br><span class="line">        Enumeration&lt;URL&gt; dirs;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            dirs = Thread.currentThread().getContextClassLoader().getResources(packageDirName);</span><br><span class="line">            <span class="keyword">while</span> (dirs.hasMoreElements()) &#123;</span><br><span class="line">                <span class="comment">// get next element</span></span><br><span class="line">                <span class="type">URL</span> <span class="variable">url</span> <span class="operator">=</span> dirs.nextElement();</span><br><span class="line">                <span class="type">String</span> <span class="variable">protocol</span> <span class="operator">=</span> url.getProtocol();</span><br><span class="line">                <span class="comment">// if it is saved at server like a file</span></span><br><span class="line">                <span class="keyword">if</span> (<span class="string">&quot;file&quot;</span>.equals(protocol)) &#123;</span><br><span class="line">                    <span class="type">String</span> <span class="variable">decode</span> <span class="operator">=</span> URLDecoder.decode(url.getFile(), <span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">                    findClassesInPackageByFile(packageName, decode, <span class="literal">true</span>, classes);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;jar&quot;</span>.equals(protocol)) &#123;</span><br><span class="line">                    <span class="comment">// 如果是jar包文件</span></span><br><span class="line">                    <span class="comment">// 定义一个JarFile</span></span><br><span class="line">                    System.out.println(<span class="string">&quot;jar类型的扫描&quot;</span>);</span><br><span class="line">                    JarFile jar;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        <span class="comment">// 获取jar</span></span><br><span class="line">                        jar = ((JarURLConnection) url.openConnection()).getJarFile();</span><br><span class="line">                        <span class="comment">// 从此jar包 得到一个枚举类</span></span><br><span class="line">                        Enumeration&lt;JarEntry&gt; entries = jar.entries();</span><br><span class="line">                        findClassesInPackageByJar(packageName, entries, packageDirName, <span class="literal">true</span>, classes);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                        <span class="comment">// log.error(&quot;在扫描用户定义视图时从jar包获取文件出错&quot;);</span></span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> classes;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">findClassesInPackageByFile</span><span class="params">(String packageName, String packagePath, <span class="keyword">final</span> <span class="type">boolean</span> recursive, Set&lt;Class&gt; classes)</span>&#123;</span><br><span class="line">        <span class="type">File</span> <span class="variable">dir</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(packagePath);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!dir.exists() || !dir.isDirectory())&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 获取目录下的目录和以.class结尾的文件</span></span><br><span class="line">        File[] dirFiles = dir.listFiles(file -&gt; (recursive &amp;&amp; file.isDirectory()) || file.getName().endsWith(<span class="string">&quot;.class&quot;</span>));</span><br><span class="line">        <span class="keyword">for</span> (File dirFile : dirFiles) &#123;</span><br><span class="line">            <span class="keyword">if</span>(dirFile.isDirectory()) &#123;</span><br><span class="line">                <span class="comment">// 目录继续往里找</span></span><br><span class="line">                findClassesInPackageByFile(packageName + <span class="string">&quot;.&quot;</span> + dirFile.getName(), dirFile.getAbsolutePath(), recursive, classes);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 去除.class</span></span><br><span class="line">                <span class="type">String</span> <span class="variable">classFileName</span> <span class="operator">=</span> dirFile.getName().substring(<span class="number">0</span>, dirFile.getName().length() - <span class="number">6</span>);</span><br><span class="line">                <span class="comment">// 添加进class</span></span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    classes.add(Thread.currentThread().getContextClassLoader().loadClass(packageName + <span class="string">&quot;.&quot;</span> + classFileName));</span><br><span class="line">                &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">findClassesInPackageByJar</span><span class="params">(String packageName, Enumeration&lt;JarEntry&gt; entries, String packageDirName, <span class="keyword">final</span> <span class="type">boolean</span> recursive, Set&lt;Class&gt; classes)</span> &#123;</span><br><span class="line">        <span class="comment">// 同样的进行循环迭代</span></span><br><span class="line">        <span class="keyword">while</span> (entries.hasMoreElements()) &#123;</span><br><span class="line">            <span class="comment">// 获取jar里的一个实体 可以是目录 和一些jar包里的其他文件 如META-INF等文件</span></span><br><span class="line">            <span class="type">JarEntry</span> <span class="variable">entry</span> <span class="operator">=</span> entries.nextElement();</span><br><span class="line">            <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> entry.getName();</span><br><span class="line">            <span class="comment">// 如果是以/开头的</span></span><br><span class="line">            <span class="keyword">if</span> (name.charAt(<span class="number">0</span>) == <span class="string">&#x27;/&#x27;</span>) &#123;</span><br><span class="line">                <span class="comment">// 获取后面的字符串</span></span><br><span class="line">                name = name.substring(<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 如果前半部分和定义的包名相同</span></span><br><span class="line">            <span class="keyword">if</span> (name.startsWith(packageDirName)) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">idx</span> <span class="operator">=</span> name.lastIndexOf(<span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">                <span class="comment">// 如果以&quot;/&quot;结尾 是一个包</span></span><br><span class="line">                <span class="keyword">if</span> (idx != -<span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="comment">// 获取包名 把&quot;/&quot;替换成&quot;.&quot;</span></span><br><span class="line">                    packageName = name.substring(<span class="number">0</span>, idx).replace(<span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 如果可以迭代下去 并且是一个包</span></span><br><span class="line">                <span class="keyword">if</span> ((idx != -<span class="number">1</span>) || recursive) &#123;</span><br><span class="line">                    <span class="comment">// 如果是一个.class文件 而且不是目录</span></span><br><span class="line">                    <span class="keyword">if</span> (name.endsWith(<span class="string">&quot;.class&quot;</span>) &amp;&amp; !entry.isDirectory()) &#123;</span><br><span class="line">                        <span class="comment">// 去掉后面的&quot;.class&quot; 获取真正的类名</span></span><br><span class="line">                        <span class="type">String</span> <span class="variable">className</span> <span class="operator">=</span> name.substring(packageName.length() + <span class="number">1</span>, name.length() - <span class="number">6</span>);</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="comment">// 添加到classes</span></span><br><span class="line">                            classes.add(Class.forName(packageName + <span class="string">&#x27;.&#x27;</span> + className));</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">                            <span class="comment">// .error(&quot;添加用户自定义视图类错误 找不到此类的.class文件&quot;);</span></span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用户中心项目</title>
-    <url>/2023/03/26/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/</url>
-    <content><![CDATA[<h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><p>作为其他系统的一个统一的用户管理中心，不用每一个系统都创建一个新的用户管理系统</p>
-<h1 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h1><p>三件套 + ant design pro + react + umi + ant design(组件库)</p>
-<p>后端：</p>
-<ul>
-<li>java</li>
-<li>spring （依赖注入框架，帮助管理Java对象，集成一些其他的内容）</li>
-<li>springmvc （web 框架， 提供接口访问，restful接口等能力）</li>
-<li>mybatis（持久层框架，对jdbc的封装）</li>
-<li>mybatis-plus（对mybatis的增强，不用写sql也能实现增删改查）<ul>
-<li><a href="https://baomidou.com/">https://baomidou.com/</a></li>
-</ul>
-</li>
-<li>springboot （快速启动，）</li>
-<li>mysql</li>
-</ul>
-<h1 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h1><p>初始化</p>
-<p>数据库设计</p>
-<p>登录</p>
-<p>注册</p>
-<h1 id="初始化前端"><a href="#初始化前端" class="headerlink" title="初始化前端"></a>初始化前端</h1><p><strong>初始化项目</strong></p>
-<p><strong>引入组件</strong></p>
-<p><strong>框架介绍 &#x2F; 瘦身 （在ant design pro 官网查看目录介绍）</strong></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><strong>node:internal&#x2F;crypto&#x2F;hash:71 this[kHandle] &#x3D; new _Hash(algorithm, xofLen)； 解决方法</strong></p>
-<p>​	执行yarn start 或者 npm start时出现错误：<br>​	Error: error:0308010C:digital envelope routines::unsupported</p>
-<p>​	说明node版本太高，卸载node安装低版本node</p>
-<h1 id="初始化后端"><a href="#初始化后端" class="headerlink" title="初始化后端"></a>初始化后端</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>zip压缩包 解压，cmd打开bin</p>
-<p><strong>以前安装过MySQL：</strong></p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> stop MySQL // 停止服务</span><br><span class="line">sc delete MySQL // 删除服务</span><br><span class="line">mysqld remove // 移除服务</span><br></pre></td></tr></table></figure>
-
-<p>安装MySQL:</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console // 初始化</span><br><span class="line">mysqld install // 安装myql服务</span><br><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> MySQL // 启动MySQL服务</span><br><span class="line">mysql -u root -p //登录</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="引入项目框架"><a href="#引入项目框架" class="headerlink" title="引入项目框架"></a>引入项目框架</h2><p>spring boot devtools 热部署</p>
-<p>lombok 自动生成get set方法</p>
-<p>Spring Configuration Processor 支持spring的configuration properties等注解，读取属性文件时有用</p>
-<p>mysql driver</p>
-<p>redis （用到后再加）</p>
-<p>spring web 给spring项目增加web访问能力</p>
-<p>mybatis 数据访问层的框架，操作数据库，对数据库进行增删改查</p>
-<h2 id="添加功能"><a href="#添加功能" class="headerlink" title="添加功能"></a>添加功能</h2><p>user的查询：</p>
-<ul>
-<li>user对象</li>
-<li>usermapper</li>
-<li>在启动类上加上包扫描 @MapperScan </li>
-<li>测试查询</li>
-</ul>
-<h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>Junit <strong>断言</strong></p>
-<p>认为这里的结果应该是一个认定的答案 如果不是就报错</p>
-<h2 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h2><h3 id="java版本与springboot版本对应的关系"><a href="#java版本与springboot版本对应的关系" class="headerlink" title="java版本与springboot版本对应的关系"></a><strong>java版本与springboot版本对应的关系</strong></h3><table>
-<thead>
-<tr>
-<th>spring boot version</th>
-<th>java version</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>springboot2.x</td>
-<td>8 or 9</td>
-</tr>
-</tbody></table>
-<h3 id="springboot配置mysql"><a href="#springboot配置mysql" class="headerlink" title="springboot配置mysql"></a><strong>springboot配置mysql</strong></h3><p>maven导入mysql依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="comment"># DataSource Config</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/user_center?useUnicode=true&amp;useSSL=false&amp;characterEncoding=utf-8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="spring-的自动注入（注解开发）原理"><a href="#spring-的自动注入（注解开发）原理" class="headerlink" title="spring 的自动注入（注解开发）原理"></a><strong>spring 的自动注入（注解开发）原理</strong></h3><p>@resource</p>
-<p>@autowrite</p>
-<h1 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h1><p>用户表： </p>
-<p>id 主键 </p>
-<p>username 昵称</p>
-<p>user_account 登录账号</p>
-<p>avatar_url 头像</p>
-<p>gender 性别</p>
-<p>user_password 密码</p>
-<p>phone 电话</p>
-<p>email 邮箱</p>
-<p>user_status 状态</p>
-<p>user_role  用户角色 0 默认 1 管理员</p>
-<hr>
-<p>下面三个字段在所有表中都应该有所记录</p>
-<p>create_time 创建时间 current_timestamp</p>
-<p>update_time 更新时间 current_timestamp on update current_timestamp</p>
-<p>is_delete 是否删除 （逻辑删除）</p>
-<p><strong>开闭原则</strong>：对拓展开放，对修改关闭</p>
-<p>truncate 清空表数据</p>
-<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h3 id="实现基本的数据库操作"><a href="#实现基本的数据库操作" class="headerlink" title="实现基本的数据库操作"></a>实现基本的数据库操作</h3><ol>
-<li>模型user对象 &#x3D;&gt; 和数据库关联</li>
-</ol>
-<p>mybatisX插件自动生成domain实体对象</p>
-<p>generateAllSetter自动生成所有对象属性设置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mybatis-plus 自动转驼峰的配置 注意</span><br></pre></td></tr></table></figure>
-
-<h3 id="注册流程"><a href="#注册流程" class="headerlink" title="注册流程"></a>注册流程</h3><ol>
-<li><p>用户输入账号密码，校验码（todo）</p>
-</li>
-<li><p>校验用户的账户、密码、校验密码是否合规</p>
-<ol>
-<li>账户不小于6位</li>
-<li>密码不小于8位</li>
-<li>账户不能重复</li>
-<li>账户不包含特殊字符</li>
-<li>密码和校验密码相同</li>
-</ol>
-</li>
-<li><p>对密码进行加密</p>
-</li>
-<li><p>向数据库插入用户数据</p>
-<p>工具包：apache.common.lang3， 提供了很多重用的公共方法</p>
-</li>
-</ol>
-<p>流程中注意对性能的处理，比如账户不能重复中会进行查库的操作可以放到最后进行</p>
-<p>单元测试</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">userAccount</span> <span class="operator">=</span> <span class="string">&quot;sc&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">userPassword</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">checkPassword</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">long</span> <span class="variable">l</span> <span class="operator">=</span> userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 账户小于6位</span></span><br><span class="line">        userPassword = <span class="string">&quot;123456&quot;</span>;</span><br><span class="line">        checkPassword = <span class="string">&quot;1234567&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 密码不相等</span></span><br><span class="line">        userAccount = <span class="string">&quot;shangchun！&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 密码小于8位</span></span><br><span class="line">        userPassword = <span class="string">&quot;1234567&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        <span class="comment">// 账号不符合规范</span></span><br><span class="line">        userPassword = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">        checkPassword = <span class="string">&quot;12345678&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br><span class="line">        userAccount = <span class="string">&quot;shangchun&quot;</span>;</span><br><span class="line">        l = userService.userRegister(userAccount, userPassword, checkPassword);</span><br><span class="line">        Assertions.assertEquals(-<span class="number">1</span>, l);</span><br></pre></td></tr></table></figure>
-
-<h3 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h3><p>接受参数：用户账户，密码</p>
-<p>请求类型：POST</p>
-<p>返回值：用户信息（<strong>脱敏</strong>）</p>
-<h4 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h4><ol>
-<li><p>校验用户账户和密码是否合法</p>
-</li>
-<li><p>校验密码是否输入正确（之后可以做限流（看一下最近这个账户登录过多少次，如果登录次数太多，限制一下））</p>
-<p>逻辑删除</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">logic-delete-value:</span> <span class="number">1</span> <span class="comment"># 逻辑已删除值(默认为 1)</span></span><br><span class="line">      <span class="attr">logic-not-delete-value:</span> <span class="number">0</span> <span class="comment"># 逻辑未删除值(默认为 0)</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="comment">// 这个注解可以使用log</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>记录用户的登录态（session），存储到服务器上（用SpringBoot框架封装的服务器tomcat记录）</p>
-</li>
-<li><p>返回用户信息（脱敏）</p>
-</li>
-</ol>
-<h4 id="如何知道是哪个用户登录-了"><a href="#如何知道是哪个用户登录-了" class="headerlink" title="如何知道是哪个用户登录 了"></a>如何知道是哪个用户登录 了</h4><p>（javaweb）</p>
-<ol>
-<li>链接服务器端后，获得一个session状态返回给前端</li>
-<li>登录成功后，得到登录成功的session，给session设置一些值（比如用户信息），返回给前端一个设置cookie的命令</li>
-<li>前端设置cookie到浏览器</li>
-<li>前端再次请求后端的时候，再请求头中带上cookie去请求</li>
-<li>从session中取出基于该session存储的变量</li>
-</ol>
-<h3 id="用户管理接口"><a href="#用户管理接口" class="headerlink" title="用户管理接口"></a>用户管理接口</h3><p>用户注册</p>
-<p>用户登录</p>
-<p><em><strong>鉴权</strong></em>：对某些操作获取用户的权限值查看是否可以使用</p>
-<p>查询用户 (可以根据username查找)</p>
-<p>删除用户 (id)</p>
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a><strong>测试</strong></h4><p>IDEA: Tools - &gt; Http Client &#x2F; 直接点击controller边上的按钮</p>
-<p>PostMan(没那么方便)</p>
-<h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><p>修改 login 请求路径</p>
-<h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><p>正向代理：替客户端发送请求</p>
-<p>反向代理：替服务器接受请求（代理服务器进行负载均衡）</p>
-<p>umi 中对 request 请求的配置</p>
-<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="attr">request</span>: <span class="title class_">RequestConfig</span> = &#123;</span><br><span class="line">  <span class="comment">// prefix: &#x27;http://localhost:8080&#x27;,</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>ant design pro 中的代理</p>
-<p><img src="H:\Users\zx065\Desktop\Java\用户中心.assets\image-20230228142352616.png" alt="image-20230228142352616"></p>
-<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><h2 id="前端-1"><a href="#前端-1" class="headerlink" title="前端"></a>前端</h2><p>添加注册路由</p>
-<p>修改重定向</p>
-<blockquote>
-<p>app.tsx 是全局初始和启动的入口</p>
-</blockquote>
-<p>前端后端都要做校验的原因：用户可以绕过前端直接向后端发起请求</p>
-<h2 id="待优化-todo"><a href="#待优化-todo" class="headerlink" title="待优化 todo"></a>待优化 todo</h2><p>前端密码提示优化</p>
-<p>用户名重复，没有友好的提示</p>
-<p>用户注销</p>
-<h1 id="获取用户登录态"><a href="#获取用户登录态" class="headerlink" title="获取用户登录态"></a>获取用户登录态</h1><p>用户接口</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>项目</tag>
-        <tag>Java</tag>
-        <tag>MyBatis</tag>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>资源分享</title>
-    <url>/2023/03/26/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%B5%84%E6%BA%90/</url>
+    <url>/2023/03/26/%E9%80%9A%E7%94%A8/%E8%B5%84%E6%BA%90/</url>
     <content><![CDATA[<h1 id="【架构师】零基础到精通——高可用"><a href="#【架构师】零基础到精通——高可用" class="headerlink" title="【架构师】零基础到精通——高可用"></a>【架构师】零基础到精通——高可用</h1><p> <a href="https://articles.zsxq.com/id_wfrwhhkqn8x3.html">https://articles.zsxq.com/id_wfrwhhkqn8x3.html</a></p>
 <h1 id="数据结构可视化"><a href="#数据结构可视化" class="headerlink" title="数据结构可视化"></a>数据结构可视化</h1><p><a href="http://www.rmboot.com/Algorithms.html">http://www.rmboot.com/Algorithms.html</a></p>
 <h1 id="Java常见设计模式总结"><a href="#Java常见设计模式总结" class="headerlink" title="Java常见设计模式总结"></a>Java常见设计模式总结</h1><p><a href="https://blog.csdn.net/a745233700/article/details/120371090?spm=1001.2014.3001.5502">https://blog.csdn.net/a745233700/article/details/120371090?spm=1001.2014.3001.5502</a></p>
@@ -908,6 +918,17 @@
       </categories>
       <tags>
         <tag>资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>读书笔记-优势成长</title>
+    <url>/2023/03/26/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%BC%98%E5%8A%BF%E6%88%90%E9%95%BF/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>读书笔记</category>
+      </categories>
+      <tags>
+        <tag>个人成长</tag>
       </tags>
   </entry>
 </search>
