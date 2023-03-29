@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.9k</span>
+            <span class="post-count">3.1k</span>
         </span>
     </span>
 
@@ -157,7 +157,7 @@
 <li>dowhile</li>
 <li>swich</li>
 </ul>
-<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>final: </p>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>final: final修饰的类不能被继承，修饰的方法不能重写，修饰的变量是基本数据类型不能改变，修饰的变量是引用类型不能指向其他的对象</p>
 <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a><em>面向对象</em></h2><p>使用原有的技术方法（单独定义和使用数组解决存储）不利于数据的管理，效率低下，代码的可重用性和可维护性差，重复性高，程序的可读性、可扩展性差。</p>
 <p>面对对象是一种编程思想。相比于传统的方法，解决了上面的问题，提供了类、对象、封装继承和多态的概念，面对对象更加的灵活，可以更好的满足复杂的业务需求。</p>
 <p>类是自定义的数据类型，是一种抽象的概念，描述了一类对象的共同特征</p>
@@ -262,9 +262,13 @@
 <h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">Size</span> &#123;</span><br><span class="line">    SMALL(<span class="string">&quot;S&quot;</span>), MEDIUM(<span class="string">&quot;M&quot;</span>), LARGE(<span class="string">&quot;L&quot;</span>), EXTRA_LARGE(<span class="string">&quot;XL&quot;</span>);</span><br><span class="line"></span><br><span class="line">    Size(String abbreviation) &#123;</span><br><span class="line">        <span class="built_in">this</span>.abbreviation = abbreviation;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String abbreviation;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getAbbreviation</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> abbreviation;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>比较两个枚举类型的值的时候直接用 &#x3D;&#x3D; 就可以了</p>
-<h2 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h2><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String 底层 final 类型的char数组 所以不可变，可以更改变量的原因是重新指向了新的对象，线程不安全</p>
-<p>StringBuffer 可变字符串，线程安全</p>
-<p>StringBuilder 可变字符串，线程不安全</p>
+<h2 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h2><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String 不可变，可以更改变量的原因是重新指向了新的对象，线程不安全</p>
+<p>StringBuffer 继承 AbstractStringBuilder，可变字符串，对方法加了同步锁线程安全</p>
+<p>StringBuilder 可变字符串，线程不安全，性能比StringBuffer提升10%-15%</p>
+<blockquote>
+<p>Java9之后String AbstractStringBuilder 的实现改用byte数组存储字符串</p>
+</blockquote>
+<h4 id="String-不可变"><a href="#String-不可变" class="headerlink" title="String 不可变"></a>String 不可变</h4><p>用final关键字修饰字符数组，保存字符串的数组是私有的，String没有暴露修改这个字符数组的方法 （final修饰字符数组只是无法修改引用其他的对象，对于数组内部地址中存储的字符仍然可以修改）</p>
 <h3 id="日期时间"><a href="#日期时间" class="headerlink" title="日期时间"></a>日期时间</h3><p>Data</p>
 <p>Calendar</p>
 <p>TimeStamp</p>
@@ -433,8 +437,7 @@
     
   </nav>
 
-   
- 
+  
    
   
     
