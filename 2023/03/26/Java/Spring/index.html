@@ -19,16 +19,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yanonjun.github.io.git","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Spring框架中涉及的编程思想概念和应用">
+    <meta name="description" content="Spring IOC概念IOC （inversion of control）控制反转，是一种编程思想，对面对对象的补充，通过将对象的创建，组装，管理反转在框架中进行，实现低耦合和可重用性 流程创建工厂 读取配置文件 通过配置文件创建实例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring编程思想">
 <meta property="og:url" content="https://yanonjun.github.io.git/2023/03/26/Java/Spring/index.html">
 <meta property="og:site_name" content="上春">
-<meta property="og:description" content="Spring框架中涉及的编程思想概念和应用">
+<meta property="og:description" content="Spring IOC概念IOC （inversion of control）控制反转，是一种编程思想，对面对对象的补充，通过将对象的创建，组装，管理反转在框架中进行，实现低耦合和可重用性 流程创建工厂 读取配置文件 通过配置文件创建实例">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://article-images.zsxq.com/Fr5lKUGA910wfJcrKhb7wMitvUKy">
 <meta property="article:published_time" content="2023-03-26T06:50:35.702Z">
-<meta property="article:modified_time" content="2023-04-06T13:58:55.018Z">
+<meta property="article:modified_time" content="2023-04-07T07:27:26.890Z">
 <meta property="article:author" content="Rise Spring">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
@@ -235,7 +235,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-06 21:58:55" itemprop="dateModified" datetime="2023-04-06T21:58:55+08:00">2023-04-06</time>
+      <time title="修改时间：2023-04-07 15:27:26" itemprop="dateModified" datetime="2023-04-07T15:27:26+08:00">2023-04-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -268,6 +268,8 @@
 <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>创建工厂</p>
 <p>读取配置文件</p>
 <p>通过配置文件创建实例</p>
+<span id="more"></span>
+
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol>
 <li>三层架构 Dao - Service - Controller</li>
 </ol>
