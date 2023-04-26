@@ -19,29 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yanonjun.github.io.git","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="【架构师】零基础到精通——高可用 https:&#x2F;&#x2F;articles.zsxq.com&#x2F;id_wfrwhhkqn8x3.html 数据结构可视化http:&#x2F;&#x2F;www.rmboot.com&#x2F;Algorithms.html Java常见设计模式总结https:&#x2F;&#x2F;blog.csdn.net&#x2F;a745233700&#x2F;article&#x2F;details&#x2F;120371090?spm&#x3D;1001.2014.3001.5">
+    <meta name="description" content="方法一：直接赋值一般我们初始化并赋初值是这样做的： 123HashMap&lt;String, Object&gt; map &#x3D; new HashMap&lt;&gt;();map.put(&quot;name1&quot;, &quot;Locy&quot;);  map.put(&quot;name2&quot;, &quot;John&quot;);   方法二：双括号初始化（Java8）在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="资源分享">
-<meta property="og:url" content="https://yanonjun.github.io.git/2023/03/26/%E5%85%B6%E4%BB%96/%E8%B5%84%E6%BA%90/index.html">
+<meta property="og:title" content="Java Map 赋值的方式">
+<meta property="og:url" content="https://yanonjun.github.io.git/2023/04/17/Java/Java%20Map%20%E5%88%9D%E5%A7%8B%E5%8C%96%E8%B5%8B%E5%80%BC/index.html">
 <meta property="og:site_name" content="Spring&#39;s Blog">
-<meta property="og:description" content="【架构师】零基础到精通——高可用 https:&#x2F;&#x2F;articles.zsxq.com&#x2F;id_wfrwhhkqn8x3.html 数据结构可视化http:&#x2F;&#x2F;www.rmboot.com&#x2F;Algorithms.html Java常见设计模式总结https:&#x2F;&#x2F;blog.csdn.net&#x2F;a745233700&#x2F;article&#x2F;details&#x2F;120371090?spm&#x3D;1001.2014.3001.5">
+<meta property="og:description" content="方法一：直接赋值一般我们初始化并赋初值是这样做的： 123HashMap&lt;String, Object&gt; map &#x3D; new HashMap&lt;&gt;();map.put(&quot;name1&quot;, &quot;Locy&quot;);  map.put(&quot;name2&quot;, &quot;John&quot;);   方法二：双括号初始化（Java8）在">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-26T08:14:07.097Z">
-<meta property="article:modified_time" content="2023-04-09T11:07:18.370Z">
+<meta property="article:published_time" content="2023-04-17T03:11:58.856Z">
+<meta property="article:modified_time" content="2023-04-17T04:59:52.962Z">
 <meta property="article:author" content="Rise Spring">
-<meta property="article:tag" content="资源">
-<meta property="article:tag" content="记录">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yanonjun.github.io.git/2023/03/26/%E5%85%B6%E4%BB%96/%E8%B5%84%E6%BA%90/">
+<link rel="canonical" href="https://yanonjun.github.io.git/2023/04/17/Java/Java%20Map%20%E5%88%9D%E5%A7%8B%E5%8C%96%E8%B5%8B%E5%80%BC/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yanonjun.github.io.git/2023/03/26/%E5%85%B6%E4%BB%96/%E8%B5%84%E6%BA%90/","path":"2023/03/26/其他/资源/","title":"资源分享"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yanonjun.github.io.git/2023/04/17/Java/Java%20Map%20%E5%88%9D%E5%A7%8B%E5%8C%96%E8%B5%8B%E5%80%BC/","path":"2023/04/17/Java/Java Map 初始化赋值/","title":"Java Map 赋值的方式"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>资源分享 | Spring's Blog</title>
+<title>Java Map 赋值的方式 | Spring's Blog</title>
   
 
 
@@ -141,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%80%90%E6%9E%B6%E6%9E%84%E5%B8%88%E3%80%91%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%88%B0%E7%B2%BE%E9%80%9A%E2%80%94%E2%80%94%E9%AB%98%E5%8F%AF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">【架构师】零基础到精通——高可用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">数据结构可视化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E5%B8%B8%E8%A7%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">Java常见设计模式总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E8%AF%B4%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">图说设计模式</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E7%9B%B4%E6%8E%A5%E8%B5%8B%E5%80%BC"><span class="nav-number">1.</span> <span class="nav-text">方法一：直接赋值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E5%8F%8C%E6%8B%AC%E5%8F%B7%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%88Java8%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">方法二：双括号初始化（Java8）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%89%EF%BC%9Aguava"><span class="nav-number">3.</span> <span class="nav-text">方式三：guava</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E5%9B%9B%EF%BC%9AJava-9%E6%88%96%E6%9B%B4%E9%AB%98%E7%89%88%E6%9C%AC"><span class="nav-number">4.</span> <span class="nav-text">方式四：Java 9或更高版本</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -199,7 +198,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/03/26/%E5%85%B6%E4%BB%96/%E8%B5%84%E6%BA%90/">
+    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/04/17/Java/Java%20Map%20%E5%88%9D%E5%A7%8B%E5%8C%96%E8%B5%8B%E5%80%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar2.jpg">
@@ -212,12 +211,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="资源分享 | Spring's Blog">
+      <meta itemprop="name" content="Java Map 赋值的方式 | Spring's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          资源分享
+          Java Map 赋值的方式
         </h1>
 
         <div class="post-meta-container">
@@ -227,15 +226,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-03-26 16:14:07" itemprop="dateCreated datePublished" datetime="2023-03-26T16:14:07+08:00">2023-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-09 19:07:18" itemprop="dateModified" datetime="2023-04-09T19:07:18+08:00">2023-04-09</time>
+      <time title="创建时间：2023-04-17 11:11:58 / 修改时间：12:59:52" itemprop="dateCreated datePublished" datetime="2023-04-17T11:11:58+08:00">2023-04-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,7 +236,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index"><span itemprop="name">其他</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
         </span>
     </span>
 
@@ -264,12 +257,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="【架构师】零基础到精通——高可用"><a href="#【架构师】零基础到精通——高可用" class="headerlink" title="【架构师】零基础到精通——高可用"></a>【架构师】零基础到精通——高可用</h1><p> <a target="_blank" rel="noopener" href="https://articles.zsxq.com/id_wfrwhhkqn8x3.html">https://articles.zsxq.com/id_wfrwhhkqn8x3.html</a></p>
-<h1 id="数据结构可视化"><a href="#数据结构可视化" class="headerlink" title="数据结构可视化"></a>数据结构可视化</h1><p><a target="_blank" rel="noopener" href="http://www.rmboot.com/Algorithms.html">http://www.rmboot.com/Algorithms.html</a></p>
-<h1 id="Java常见设计模式总结"><a href="#Java常见设计模式总结" class="headerlink" title="Java常见设计模式总结"></a>Java常见设计模式总结</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/a745233700/article/details/120371090?spm=1001.2014.3001.5502">https://blog.csdn.net/a745233700/article/details/120371090?spm=1001.2014.3001.5502</a></p>
-<h1 id="图说设计模式"><a href="#图说设计模式" class="headerlink" title="图说设计模式"></a>图说设计模式</h1><p><a target="_blank" rel="noopener" href="https://design-patterns.readthedocs.io/zh_CN/latest/">https://design-patterns.readthedocs.io/zh_CN/latest/</a></p>
-<p><a target="_blank" rel="noopener" href="https://chat.openai.com/chat/eec202d8-3609-45c3-85f6-e8092966ef00">技术 (openai.com)</a></p>
+        <h1 id="方法一：直接赋值"><a href="#方法一：直接赋值" class="headerlink" title="方法一：直接赋值"></a>方法一：直接赋值</h1><p>一般我们初始化并赋初值是这样做的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, Object&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">map.put(<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>);  </span><br><span class="line">map.put(<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span>);</span><br></pre></td></tr></table></figure>
 
+
+<h1 id="方法二：双括号初始化（Java8）"><a href="#方法二：双括号初始化（Java8）" class="headerlink" title="方法二：双括号初始化（Java8）"></a>方法二：双括号初始化（Java8）</h1><p>在一个表达式中完成初始化并赋初值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, Object&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;() &#123;</span><br><span class="line">    &#123;</span><br><span class="line">        put(<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>); </span><br><span class="line">        put(<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这里用了双括号来初始化。第一层括弧实际是定义了一个匿名内部类 ，第二层括弧实际上是一个实例初始化块 ，这个块在内部匿名类构造时被执行。但是这种写法可能导致这个对象串行化失败的问题。</p>
+<p>这种使用双括号进行初始化的语法在执行效率上要比普通的初始化写法要稍低。</p>
+<p>List 等也都可以使用这种方法</p>
+<h1 id="方式三：guava"><a href="#方式三：guava" class="headerlink" title="方式三：guava"></a>方式三：guava</h1><p>谷歌推出的包</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, String&gt; myMapB = ImmutableMap.&lt;String, String&gt;builder()</span><br><span class="line">            .put(<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>); </span><br><span class="line">        	.put(<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span>);</span><br><span class="line">            .build();</span><br></pre></td></tr></table></figure>
+
+<p>注意 ImmutableMap 初始化之后不能再进行put，会抛出异常</p>
+<p>查看 ImmutableMap 源码可以发现，调用put方法时，直接抛异常：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Deprecated</span></span><br><span class="line"><span class="meta">@CanIgnoreReturnValue</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> V <span class="title function_">put</span><span class="params">(K k, V v)</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">UnsupportedOperationException</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="方式四：Java-9或更高版本"><a href="#方式四：Java-9或更高版本" class="headerlink" title="方式四：Java 9或更高版本"></a>方式四：Java 9或更高版本</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 最多存储10个元素</span></span><br><span class="line"></span><br><span class="line">Map&lt;String, String&gt; test1 = Map.of(</span><br><span class="line">    <span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 没有限制</span></span><br><span class="line">Map&lt;String, String&gt; test2 = Map.ofEntries(</span><br><span class="line">    entry(<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>),</span><br><span class="line">    entry(<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -292,21 +299,20 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E8%B5%84%E6%BA%90/" rel="tag"># 资源</a>
-              <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"># 记录</a>
+              <a href="/tags/Java/" rel="tag"># Java</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/03/26/Java/%E7%94%A8%E6%88%B7%E4%B8%AD%E5%BF%83/" rel="prev" title="用户中心项目">
-                  <i class="fa fa-chevron-left"></i> 用户中心项目
+                <a href="/2023/04/07/%E5%85%B6%E4%BB%96/%E5%85%B6%E4%BB%96/" rel="prev" title="软件推荐">
+                  <i class="fa fa-chevron-left"></i> 软件推荐
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/03/26/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E4%BC%98%E5%8A%BF%E6%88%90%E9%95%BF/" rel="next" title="读书笔记-优势成长">
-                  读书笔记-优势成长 <i class="fa fa-chevron-right"></i>
+                <a href="/2023/04/19/Java/Java%E5%8F%8D%E5%B0%84/" rel="next" title="Java反射">
+                  Java反射 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

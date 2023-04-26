@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -162,7 +162,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -193,7 +193,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/04/10/%E9%80%9A%E7%94%A8/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/04/26/windows11%E5%AE%89%E8%A3%85%E5%AE%89%E5%8D%93%E5%AD%90%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar2.jpg">
@@ -211,7 +211,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/10/%E9%80%9A%E7%94%A8/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">桥接模式</a>
+          <a href="/2023/04/26/windows11%E5%AE%89%E8%A3%85%E5%AE%89%E5%8D%93%E5%AD%90%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">windows11安装安卓子系统</a>
         </h2>
 
         <div class="post-meta-container">
@@ -223,7 +223,102 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-04-10 19:38:34 / 修改时间：19:49:33" itemprop="dateCreated datePublished" datetime="2023-04-10T19:38:34+08:00">2023-04-10</time>
+      <time title="创建时间：2023-04-26 16:54:47 / 修改时间：17:13:48" itemprop="dateCreated datePublished" datetime="2023-04-26T16:54:47+08:00">2023-04-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Windows11-安装安卓子系统"><a href="#Windows11-安装安卓子系统" class="headerlink" title="Windows11 安装安卓子系统"></a>Windows11 安装安卓子系统</h1><p>下载文件 </p>
+<p><code>MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___4dg8wj792vbvbf7r67u.Msixbundle</code></p>
+<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1N80EgLr7u-SI9dNENJOihw">https://pan.baidu.com/s/1N80EgLr7u-SI9dNENJOihw</a><br>提取码：me5l</p>
+<p>这个是 WSA  接下来要安装 WSA</p>
+<p>按 win + r 打开运行 输入 cmd 确定</p>
+<p>弹出命令行窗口后 输入下面的命令</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add-appxpackage &quot;文件路径/MicrosoftCorporationII.WindowsSubsystemForAndroid_1.<span class="number">7</span>.<span class="number">32815</span>.<span class="number">0</span>_neutral___4dg8wj792vbvbf7r67u.Msixbundle&quot;</span><br></pre></td></tr></table></figure>
+
+<p>文件路径要替换成文件存放的位置，注意不要丢失了文件的后缀</p>
+<p>安装好之后就可以运行安卓软件了</p>
+<p>但是还没有安装安卓软件，要怎么安装安卓软件呢</p>
+<p>有一个 WSA 工具可以更方便的使用 WSA ，在微软商店中也提供了这个工具的下载，打开 Microsoft Store 搜索 <code>WSA 工具箱</code></p>
+<p>如果没有搜到 下面提供了微软商店的下载链接</p>
+<p><a target="_blank" rel="noopener" href="https://apps.microsoft.com/store/detail/wsa-toolbox/9PPSP2MKVTGT?hl=en-us&gl=us">WSA Toolbox - Microsoft Store Apps</a></p>
+<p>下载链接也失效了的话 这个是 github 的仓库地址 点击右边栏的 Releases 下载 latest 版本即可</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/makazeu/WsaToolbox">makazeu&#x2F;WsaToolbox (github.com)</a></p>
+<p>在 WSA 工作箱中根据提示 配置好连接 WSA 就可以安装 APK 在 windows 上运行安装的安卓程序了</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/04/19/Java/Java%E6%B3%9B%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar2.jpg">
+      <meta itemprop="name" content="Rise Spring">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spring's Blog">
+      <meta itemprop="description" content="每天都好困😋">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Spring's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/19/Java/Java%E6%B3%9B%E5%9E%8B/" class="post-title-link" itemprop="url">Java泛型</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-19 14:54:41 / 修改时间：15:13:08" itemprop="dateCreated datePublished" datetime="2023-04-19T14:54:41+08:00">2023-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
     </span>
 
   
@@ -237,6 +332,209 @@
     
     <div class="post-body" itemprop="articleBody">
           
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/04/19/Java/Java%E5%8F%8D%E5%B0%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar2.jpg">
+      <meta itemprop="name" content="Rise Spring">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spring's Blog">
+      <meta itemprop="description" content="每天都好困😋">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Spring's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/19/Java/Java%E5%8F%8D%E5%B0%84/" class="post-title-link" itemprop="url">Java反射</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-19 14:53:49 / 修改时间：15:22:38" itemprop="dateCreated datePublished" datetime="2023-04-19T14:53:49+08:00">2023-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Java 语言中的类、方法、变量、参数和包等都可以被注解修饰。</p>
+<h1 id="Annotation"><a href="#Annotation" class="headerlink" title="Annotation"></a>Annotation</h1><p>注解是一个接口 有三个主要部分</p>
+<ol>
+<li><p>Annotation</p>
+<p>每 1 个 Annotation 对象，都会有唯一的 RetentionPolicy 属性；至于 ElementType 属性，则有 1~n 个。</p>
+</li>
+<li><p><strong>ElementType 是 Enum 枚举类型，它用来指定 Annotation 的类型。</strong></p>
+</li>
+</ol>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">ElementType</span> &#123;</span><br><span class="line">    TYPE,               <span class="comment">/* 类、接口（包括注释类型）或枚举声明  */</span></span><br><span class="line">    FIELD,              <span class="comment">/* 字段声明（包括枚举常量）  */</span></span><br><span class="line">    METHOD,             <span class="comment">/* 方法声明  */</span></span><br><span class="line">    PARAMETER,          <span class="comment">/* 参数声明  */</span></span><br><span class="line">    CONSTRUCTOR,        <span class="comment">/* 构造方法声明  */</span></span><br><span class="line">    LOCAL_VARIABLE,     <span class="comment">/* 局部变量声明  */</span></span><br><span class="line">    ANNOTATION_TYPE,    <span class="comment">/* 注释类型声明  */</span></span><br><span class="line">    PACKAGE             <span class="comment">/* 包声明  */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>   指定一个 Annotation 对象使用在什么类型上</p>
+<ol start="3">
+<li><p>RetentionPolicy</p>
+<p>用来指定 Annotation 的作用域。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">RetentionPolicy</span> &#123;</span><br><span class="line">    SOURCE,            <span class="comment">/* Annotation信息仅存在于编译器处理期间，编译器处理完之后就没有该Annotation信息了  */</span></span><br><span class="line"></span><br><span class="line">    CLASS,             <span class="comment">/* 编译器将Annotation存储于类对应的.class文件中。默认行为  */</span></span><br><span class="line"></span><br><span class="line">    RUNTIME            <span class="comment">/* 编译器将Annotation存储于class文件中，并且可由JVM读入 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Annotation-通用定义"><a href="#Annotation-通用定义" class="headerlink" title="Annotation 通用定义"></a>Annotation 通用定义</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotation1 &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>@interface</strong></p>
+<p>使用 @interface 定义类时，意味着这个类实现了 java.lang.annotation.Annotation 接口，表示这个类是一个Annotation。定义 Annotation 时，@interface 是必须的。注解不能继承其他的注解或接口。</p>
+<p><strong>@Retention</strong> </p>
+<p>指定 Annotation 的策略属性，是只在代码中，还是编入class文件中，或者是在运行时可以通过反射访问，其中属性就是 RetentionPolicy 的类型。</p>
+<p><strong>@Documented</strong></p>
+<p>标记这些注解是否可以出现在 javadoc 中。</p>
+<p><strong>@Target</strong></p>
+<p>指定 Annotation 的类型属性，类型是 ElementType 。</p>
+<p>@Inherited - 标记这个注解是继承于哪个注解类(默认注解并没有继承于任何子类)</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/04/17/Java/Java%20Map%20%E5%88%9D%E5%A7%8B%E5%8C%96%E8%B5%8B%E5%80%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar2.jpg">
+      <meta itemprop="name" content="Rise Spring">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spring's Blog">
+      <meta itemprop="description" content="每天都好困😋">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Spring's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/17/Java/Java%20Map%20%E5%88%9D%E5%A7%8B%E5%8C%96%E8%B5%8B%E5%80%BC/" class="post-title-link" itemprop="url">Java Map 赋值的方式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-17 11:11:58 / 修改时间：12:59:52" itemprop="dateCreated datePublished" datetime="2023-04-17T11:11:58+08:00">2023-04-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="方法一：直接赋值"><a href="#方法一：直接赋值" class="headerlink" title="方法一：直接赋值"></a>方法一：直接赋值</h1><p>一般我们初始化并赋初值是这样做的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, Object&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">map.put(<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>);  </span><br><span class="line">map.put(<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="方法二：双括号初始化（Java8）"><a href="#方法二：双括号初始化（Java8）" class="headerlink" title="方法二：双括号初始化（Java8）"></a>方法二：双括号初始化（Java8）</h1><p>在一个表达式中完成初始化并赋初值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, Object&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;() &#123;</span><br><span class="line">    &#123;</span><br><span class="line">        put(<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>); </span><br><span class="line">        put(<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这里用了双括号来初始化。第一层括弧实际是定义了一个匿名内部类 ，第二层括弧实际上是一个实例初始化块 ，这个块在内部匿名类构造时被执行。但是这种写法可能导致这个对象串行化失败的问题。</p>
+<p>这种使用双括号进行初始化的语法在执行效率上要比普通的初始化写法要稍低。</p>
+<p>List 等也都可以使用这种方法</p>
+<h1 id="方式三：guava"><a href="#方式三：guava" class="headerlink" title="方式三：guava"></a>方式三：guava</h1><p>谷歌推出的包</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, String&gt; myMapB = ImmutableMap.&lt;String, String&gt;builder()</span><br><span class="line">            .put(<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>); </span><br><span class="line">        	.put(<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span>);</span><br><span class="line">            .build();</span><br></pre></td></tr></table></figure>
+
+<p>注意 ImmutableMap 初始化之后不能再进行put，会抛出异常</p>
+<p>查看 ImmutableMap 源码可以发现，调用put方法时，直接抛异常：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Deprecated</span></span><br><span class="line"><span class="meta">@CanIgnoreReturnValue</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> V <span class="title function_">put</span><span class="params">(K k, V v)</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">UnsupportedOperationException</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="方式四：Java-9或更高版本"><a href="#方式四：Java-9或更高版本" class="headerlink" title="方式四：Java 9或更高版本"></a>方式四：Java 9或更高版本</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 最多存储10个元素</span></span><br><span class="line"></span><br><span class="line">Map&lt;String, String&gt; test1 = Map.of(</span><br><span class="line">    <span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 没有限制</span></span><br><span class="line">Map&lt;String, String&gt; test2 = Map.ofEntries(</span><br><span class="line">    entry(<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;Locy&quot;</span>),</span><br><span class="line">    entry(<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;John&quot;</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -387,7 +685,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-12 14:43:30" itemprop="dateModified" datetime="2023-04-12T14:43:30+08:00">2023-04-12</time>
+      <time title="修改时间：2023-04-12 17:45:42" itemprop="dateModified" datetime="2023-04-12T17:45:42+08:00">2023-04-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -413,7 +711,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="软件开发原则"><a href="#软件开发原则" class="headerlink" title="软件开发原则"></a>软件开发原则</h1><h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><p><strong>对于一个类只有一个引起它变化的原因</strong></p>
+          <p>《大话设计模式》、《人人都懂设计模式》记录</p>
+<h1 id="软件开发原则"><a href="#软件开发原则" class="headerlink" title="软件开发原则"></a>软件开发原则</h1><h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><p><strong>对于一个类只有一个引起它变化的原因</strong></p>
 <p>一个类只负责尽可能独立的一项功能，尽可能少的职责</p>
 <p>优点：</p>
 <p>（1）功能单一，职责清晰。</p>
@@ -809,201 +1108,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/03/26/Java/Spring/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar2.jpg">
-      <meta itemprop="name" content="Rise Spring">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Spring's Blog">
-      <meta itemprop="description" content="每天都好困😋">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Spring's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/26/Java/Spring/" class="post-title-link" itemprop="url">Spring编程思想</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-03-26 14:50:35" itemprop="dateCreated datePublished" datetime="2023-03-26T14:50:35+08:00">2023-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-07 15:27:26" itemprop="dateModified" datetime="2023-04-07T15:27:26+08:00">2023-04-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Spring-IOC"><a href="#Spring-IOC" class="headerlink" title="Spring IOC"></a>Spring IOC</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>IOC （inversion of control）控制反转，是一种编程思想，对面对对象的补充，通过将对象的创建，组装，管理反转在框架中进行，实现低耦合和可重用性</p>
-<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>创建工厂</p>
-<p>读取配置文件</p>
-<p>通过配置文件创建实例</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/26/Java/Spring/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/03/26/Java/Java/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar2.jpg">
-      <meta itemprop="name" content="Rise Spring">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Spring's Blog">
-      <meta itemprop="description" content="每天都好困😋">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Spring's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/26/Java/Java/" class="post-title-link" itemprop="url">Java</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-03-26 12:21:27" itemprop="dateCreated datePublished" datetime="2023-03-26T12:21:27+08:00">2023-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-07 11:27:09" itemprop="dateModified" datetime="2023-04-07T11:27:09+08:00">2023-04-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Java-特点"><a href="#Java-特点" class="headerlink" title="Java 特点"></a><strong>Java 特点</strong></h2><p>java语言特性</p>
-<ul>
-<li>面对对象：将重点放在数据和对象的接口上</li>
-<li>简单性：相比c++，减少了头文件、指针等很多概念，而且java可以在很小的机器上独立运行</li>
-<li>Java语言是健壮的 : 强类型机制, 异常处理, 垃圾的自动收集</li>
-<li>跨平台性：java文件被编译成字节码文件，然后在不同的机器上可以通过JVM编译成机器码执行</li>
-<li>解释性语言：需要解释器来执行</li>
-<li>分布式：有丰富的例程库用于处理TCP&#x2F;IP协议，可以通过URL访问网络上的对象</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/26/Java/Java/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
 
 </div>
   </main>
