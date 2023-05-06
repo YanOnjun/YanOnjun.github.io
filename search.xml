@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>层的优化</title>
+    <title>Controller层的优化</title>
     <url>/2023/05/06/Java/Contoller%E5%B1%82%E7%9A%84%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>给Controller层的工作有以下几项：</p>
 <ul>
@@ -52,6 +52,9 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GlobalExceptionHandler</span> &#123;</span><br><span class="line"></span><br><span class="line">     <span class="meta">@ExceptionHandler(BusinessException.class)</span></span><br><span class="line">     <span class="keyword">public</span> Result&lt;?&gt; handlerBusinessException(BusinessException e) &#123;</span><br><span class="line">         <span class="keyword">return</span> Result.failed(e);</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExceptionHandler(RuntimeException.class)</span></span><br><span class="line">    <span class="keyword">public</span> Result&lt;?&gt; handlerRuntimeException(RuntimeException e) &#123;</span><br><span class="line">        <span class="keyword">return</span> Result.failed(e.getMessage());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="解析请求参数"><a href="#解析请求参数" class="headerlink" title="解析请求参数"></a>解析请求参数</h2>]]></content>
+      <tags>
+        <tag>Spring</tag>
+      </tags>
   </entry>
   <entry>
     <title>Golang</title>
