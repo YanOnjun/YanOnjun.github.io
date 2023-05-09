@@ -19,25 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yanonjun.github.io.git","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="每天都好困😋">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Spring&#39;s Blog">
-<meta property="og:url" content="https://yanonjun.github.io.git/tags/Golang/index.html">
+    <meta name="description" content="Redis 介绍 和 一些使用场景 redis是一个高性能的nosql存储系统，可以用来实现缓存、会话管理、消息队列等场景，使用redis存储经常访问的数据，可以减少对数据库的访问，因为redis的QPS远超mysql，也提升了数据响应的速度，同时使用redis进行分布式session的存储，在使用多服务器时提供用户登录在不同的服务器上时不会出现重新登录的情况，以及session的同步数据共享 R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于 Redis 一些问题的记录">
+<meta property="og:url" content="https://yanonjun.github.io.git/2023/05/08/redis/index.html">
 <meta property="og:site_name" content="Spring&#39;s Blog">
-<meta property="og:description" content="每天都好困😋">
+<meta property="og:description" content="Redis 介绍 和 一些使用场景 redis是一个高性能的nosql存储系统，可以用来实现缓存、会话管理、消息队列等场景，使用redis存储经常访问的数据，可以减少对数据库的访问，因为redis的QPS远超mysql，也提升了数据响应的速度，同时使用redis进行分布式session的存储，在使用多服务器时提供用户登录在不同的服务器上时不会出现重新登录的情况，以及session的同步数据共享 R">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-08T13:25:20.000Z">
+<meta property="article:modified_time" content="2023-05-08T13:32:12.221Z">
 <meta property="article:author" content="Rise Spring">
+<meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yanonjun.github.io.git/tags/Golang/">
+<link rel="canonical" href="https://yanonjun.github.io.git/2023/05/08/redis/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/Golang/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yanonjun.github.io.git/2023/05/08/redis/","path":"2023/05/08/redis/","title":"关于 Redis 一些问题的记录"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: Golang | Spring's Blog</title>
+<title>关于 Redis 一些问题的记录 | Spring's Blog</title>
   
 
 
@@ -183,50 +186,127 @@
 
     </div>
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Golang
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yanonjun.github.io.git/2023/05/08/redis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar2.jpg">
+      <meta itemprop="name" content="Rise Spring">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Spring's Blog">
+      <meta itemprop="description" content="每天都好困😋">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="关于 Redis 一些问题的记录 | Spring's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于 Redis 一些问题的记录
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+
+      <time title="创建时间：2023-05-08 21:25:20 / 修改时间：21:32:12" itemprop="dateCreated datePublished" datetime="2023-05-08T21:25:20+08:00">2023-05-08</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><strong>Redis 介绍 和 一些使用场景</strong></p>
+<p>redis是一个高性能的nosql存储系统，可以用来实现缓存、会话管理、消息队列等场景，使用redis存储经常访问的数据，可以减少对数据库的访问，因为redis的QPS远超mysql，也提升了数据响应的速度，同时使用redis进行分布式session的存储，在使用多服务器时提供用户登录在不同的服务器上时不会出现重新登录的情况，以及session的同步数据共享</p>
+<p><strong>Redis支持哪些常见的数据结构？它们各自适用于哪些场景？</strong></p>
+<p>redis 有 五种基础的数据结构 string字符串，list列表，set无序集合，hash散列表，zset有序集合。 </p>
+<p>string使用的比较常见的场景就是常规数据的缓存比如字符串，数字，图片，序列化后的对象，记录单位时间内用户的请求用来制作简单的限流，记录页面单位时间内的访问次数，还有用来做分布式锁，绝大部分对象用string存储也就够了。</p>
+<p> set可以用来存储一些不能重复的数据比如文章用户点赞，可以用来对一些数据求交集并集和差集的场景还有可以用来获取随机的场景比如随机抽奖。 </p>
+<p>hash可以用来存储频繁修改的数据。</p>
+<p><strong>Redis提供了哪两种类型的持久化方式？它们之间有什么区别？在使用中，更倾向于选择哪一种持久化方式？</strong></p>
+<p>redis 提供了 AOF、 RDB 还有  AOF和RDB两种方式混合的持久化机制，ROB是将数据以快照的形式存储在本地，配置中每一段时间发生了一定次数的修改就会创建快照保存数据副本，AOF是以操作日志的方式追加到文件，在每一条更改了redis中数据的命令之后，这条命令就会被写入AOF缓存区然后写入到AOF文件中，最后根据同步策略决定什么时候将数据保存到硬盘。</p>
+<p>两种方式各有优缺点，rdb使用压缩后的二进制数据，保存某个时间的数据集，文件小，适合做数据的备份和灾难恢复，而且使用rdb还原数据，可以直接解析还原，速度很快，但是rdb的安全性不如aof，无法做到实时的持久化数据，生成rdb文件的过程虽然使用了子进程，不会阻塞主进程，但也会对机器的cpu和内存造成影响，造成服务器宕机。aof的文件存储时只写入一条命令，支持秒级恢复，操作更加迅速，是命令文件也更好的分析文件内容，但是在恢复时执行所有命令，恢复时间长，存储大量命令，文件也更大</p>
+<p>所以一般使用AOF和RDB两种方式混合的持久化，可以保证保存的数据的安全性，以及RDB快照可以更快的进行数据库备份重启。</p>
+<p><strong>Redis主从复制的原理，应用场景和好处。</strong></p>
+<p>原理：AOF和RDB保证了数据的可用性，保证redis宕机时，数据不丢失或只丢失一点，但是如果服务器宕机了，在数据恢复这段时间是无法处理请求的，如果硬盘出现故障，数据也会丢失，主从复制就是为了处理这种情况，实际上就是多台redis服务器，同时保持数据的一致性和每台服务器的数据的读写操作，在分出redis主服务器和从服务器之后，从服务器会对主服务器进行同步，由从服务器向主服务器建立连接，然后主服务器执行bgsave生成一个rdb文件发送给从服务器，从服务器清除数据执行rdb文件完成同步，在之后每次新写命令发生时，主服务器也会发送到从服务器，以此完成同步。</p>
+<p>使用主从复制可以实现读写分离，在读的频率大于写，单机redis无法应付大量的读请求时，利用从服务器进行读，主服务器进行写，可以缓解这种情况。</p>
+<p>主从复制还提供了故障恢复能力，当主服务器宕机时，可以自动切换到从服务器来保证服务的可用性。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-03-26T14:51:42+08:00"
-              content="2023-03-26">
-          03-26
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/alipay.jpg" alt="Rise Spring 支付宝">
+        <span>支付宝</span>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/03/26/Golang/Golang/" itemprop="url">
-            <span itemprop="name">Golang</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Redis/" rel="tag"># Redis</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/06/%E5%85%B6%E4%BB%96/%E6%8A%A5%E9%94%99/" rel="prev" title="报错">
+                  <i class="fa fa-chevron-left"></i> 报错
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>
