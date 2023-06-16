@@ -30,7 +30,214 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/29/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E6%AF%94%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%A7%E8%83%BD%E9%AB%98%EF%BC%9F/">面向过程比面向对象性能高？</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-29</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>Java 性能差的原因是因为 Java 是半编译语言，最终的执行代码不是可以直接被 CPU 执行的二进制编码。</p>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/16/redis/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/String/">String</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-06-16</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>String 是 Redis 中最简单最常用的一个数据结构。</p>
+<p>用来存储任何类型的数据：字符串、整数、浮点数、图片（base64编码或者路径）、序列化后的对象。</p>
+<p>Redis中的字符串使用的不是 c 语言原生的字符串，而是自己实现的一种数据结构：简单动态字符串（SDS）。相比于原生字符串，SDS 不仅可以保存文本数据，还可以保存二进制数据，获取字符串长度的复杂度为O(1)，并且 API 安全，不会造成缓冲区溢出</p>
+
+        <h3 id="常用命令"   >
+          <a href="#常用命令" class="heading-link"><i class="fas fa-link"></i></a><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3>
+      <div class="table-container"><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SET key value</td>
+<td>设置指定 key 的值</td>
+</tr>
+<tr>
+<td>SETNX key value</td>
+<td>只有在 key 不存在时设置 key 的值</td>
+</tr>
+<tr>
+<td>GET key</td>
+<td>获取指定 key 的值</td>
+</tr>
+<tr>
+<td>MSET key1 value1 key2 value2 …</td>
+<td>设置一个或多个指定 key 的值</td>
+</tr>
+<tr>
+<td>MGET key1 key2 …</td>
+<td>获取一个或多个指定 key 的值</td>
+</tr>
+<tr>
+<td>STRLEN key</td>
+<td>返回 key 所储存的字符串值的长度</td>
+</tr>
+<tr>
+<td>INCR key</td>
+<td>将 key 中储存的数字值增一</td>
+</tr>
+<tr>
+<td>DECR key</td>
+<td>将 key 中储存的数字值减一</td>
+</tr>
+<tr>
+<td>EXISTS key</td>
+<td>判断指定 key 是否存在</td>
+</tr>
+<tr>
+<td>DEL key（通用）</td>
+<td>删除指定的 key</td>
+</tr>
+<tr>
+<td>EXPIRE key seconds（通用）</td>
+<td>给指定 key 设置过期时间</td>
+</tr>
+</tbody></table></div>
+
+        <h3 id="应用场景"   >
+          <a href="#应用场景" class="heading-link"><i class="fas fa-link"></i></a><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3>
+      <ol>
+<li><p><strong>存储常规数据</strong><br> 缓存 session、token、图片地址、序列化后的对象。</p>
+</li>
+<li><p><strong>计数</strong><br> 用户单位时间的请求数（简单限流可以用到）、页面单位时间的访问数。</p>
+</li>
+<li><p><strong>分布式锁</strong><br> 利用 <code>SETNX key value</code> 命令可以实现一个最简易的分布式锁。</p>
+</li>
+</ol>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/16/redis/%E5%9F%BA%E7%A1%80/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-06-13</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/16/redis/%E5%9F%BA%E7%A1%80/Redis%20%E6%8C%81%E4%B9%85%E5%8C%96/">Redis 持久化</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-06-16</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>缓存的数据存储在内存中，但是当机器关机、宕机之后，数据会丢失，Redis 于是实现了数据的持久化，将数据写入到硬盘之中。</p>
+<p>Redis 提供了三种持久化方式</p>
+<ul>
+<li>快照 RDB</li>
+<li>追加文件 AOF</li>
+<li>RDB 和 AOF 的混合持久化</li>
+</ul>
+<p>快照持久化是 Redis 默认采用的持久化方式，在 <code>redis.conf</code> 文件中有配置</p>
+
+        <h2 id="RDB"   >
+          <a href="#RDB" class="heading-link"><i class="fas fa-link"></i></a><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h2>
+      <p>Redis 通过两个命令来生成 RDB 快照</p>
+<ul>
+<li>save：同步保存，会阻塞主进程</li>
+<li>bgsave：通过子进程执行保存，不会阻塞</li>
+</ul>
+
+        <h2 id="AOF"   >
+          <a href="#AOF" class="heading-link"><i class="fas fa-link"></i></a><a href="#AOF" class="headerlink" title="AOF"></a>AOF</h2>
+      </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/16/redis/%E5%9F%BA%E7%A1%80/Redis%20%E5%9F%BA%E7%A1%80/">Redis 基础</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-06-16</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="Redis介绍"   >
+          <a href="#Redis介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#Redis介绍" class="headerlink" title="Redis介绍"></a>Redis介绍</h2>
+      <p>Redis 是基于 C 语言开发的 NoSQL 数据库，存储 KV 键值对数据，数据存储在内存中，读写速度非常快。</p>
+<p>个人学习可以通过本机安装或者使用 <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://try.redis.io/" >try redis</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 进行体验</p>
+<p>数据结构：</p>
+<ul>
+<li>基础数据结构：[[String]]、List、Hash、Set、ZSet</li>
+</ul>
+
+        <h2 id="SQL-和-NOSQL"   >
+          <a href="#SQL-和-NOSQL" class="heading-link"><i class="fas fa-link"></i></a><a href="#SQL-和-NOSQL" class="headerlink" title="SQL 和 NOSQL"></a>SQL 和 NOSQL</h2>
+      <div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">SQL</th>
+<th align="center">NoSQL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">结构化</td>
+<td align="center">非结构化</td>
+</tr>
+<tr>
+<td align="center">关联</td>
+<td align="center">非关联（信息之间没有关联）</td>
+</tr>
+<tr>
+<td align="center">SQL查询</td>
+<td align="center">非SQL（没有语法）</td>
+</tr>
+</tbody></table></div>
+
+        <h4 id="参考链接"   >
+          <a href="#参考链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4>
+      <ul>
+<li><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/63371253" >SQL 与 NoSQL还在傻傻分不清？</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h2 id="Redis-特点"   >
+          <a href="#Redis-特点" class="heading-link"><i class="fas fa-link"></i></a><a href="#Redis-特点" class="headerlink" title="Redis 特点"></a>Redis 特点</h2>
+      <ul>
+<li>键值对类型存储</li>
+<li>基于内存</li>
+<li>有过期策略</li>
+<li>单线程，命令具有原子性</li>
+<li>支持[[Redis 持久化|持久化]]</li>
+<li>支持分布式（主从集群）</li>
+</ul>
+
+        <h2 id="Redis-快的原因"   >
+          <a href="#Redis-快的原因" class="heading-link"><i class="fas fa-link"></i></a><a href="#Redis-快的原因" class="headerlink" title="Redis 快的原因"></a>Redis 快的原因</h2>
+      <ul>
+<li>Redis 基于内存（内存的访问速度是磁盘的上千倍）<red>【主要原因】</red></li>
+<li>Redis 基于 Reactor 模式设计实现的模式，主要单线程事件循环和 IO 多路复用</li>
+<li>Redis 优化后的数据结构，性能很高</li>
+</ul>
+
+        <h2 id="为什么用-Redis"   >
+          <a href="#为什么用-Redis" class="heading-link"><i class="fas fa-link"></i></a><a href="#为什么用-Redis" class="headerlink" title="为什么用 Redis"></a>为什么用 Redis</h2>
+      <ol>
+<li>高性能<br> 数据从数据库中获取的话，是从磁盘中获取，过程比较慢，使用 Redis 的话，可以直接从缓存中获取，直接操作内存，速度快</li>
+<li>高并发<br> Redis 的 QPS 很容易达到 10w+ ，Redis 集群会更高，而数据库的 QPS 在 1w左右，操作缓存能承受的能力是远大于数据库。也就提高了系统的并发。<blockquote>
+<p>QPS( Query Per Second) : 每秒查询次数</p>
+</blockquote>
+</li>
+</ol>
+
+        <h2 id="Redis-应用"   >
+          <a href="#Redis-应用" class="heading-link"><i class="fas fa-link"></i></a><a href="#Redis-应用" class="headerlink" title="Redis 应用"></a>Redis 应用</h2>
+      <p>除了做缓存，Redis 还可以做：</p>
+<ul>
+<li>分布式锁</li>
+<li>限流</li>
+<li>消息队列 (不推荐 最好还是使用专门的消息队列)</li>
+<li>…</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/16/%E5%85%B6%E4%BB%96/WSL%20%E5%AE%89%E8%A3%85%E3%80%81Windows%E4%BD%BF%E7%94%A8%20Docker%E5%AE%89%E8%A3%85%E8%BF%9E%E6%8E%A5MySQL/">WSL 安装、Windows使用 Docker安装连接MySQL</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-16</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-06-16</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>安装 WSL</p>
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</span><br></pre></td></tr></table></div></figure>
+
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Invoke-WebRequest -Uri https://wslstorestorage.blob.core.windows.<span class="built_in">net</span>/wslblob/wsl_update_x64.msi -OutFile wsl_update_x64.msi</span><br><span class="line"></span><br><span class="line">&gt; .\wsl_update_x64.msi</span><br></pre></td></tr></table></div></figure>
+
+<p>在微软商店中安装 ubuntu 系统，启动之后可能提示错误<code>参考的对象类型不支持尝试的操作</code></p>
+
+        <h3 id="解决"   >
+          <a href="#解决" class="heading-link"><i class="fas fa-link"></i></a><a href="#解决" class="headerlink" title="解决"></a>解决</h3>
+      <p>下载：<br><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/dyingsu/nolsp" >https://github.com/dyingsu/nolsp</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>然后执行</p>
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\NoLsp_fix_WSL2_参考的对象类型不支持尝试的操作.exe C:\windows\system32\wsl.exe</span><br></pre></td></tr></table></div></figure>
+<p>执行完之后看到 sucess 的提示就是成功 了</p>
+<p>wsl -l -v</p>
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; wsl --export Ubuntu-<span class="number">18</span>.<span class="number">04</span> E:\wsl2\Ubuntu-<span class="number">18</span>.<span class="number">04</span>.tar</span><br><span class="line">&gt; wsl --unregister Ubuntu-<span class="number">18</span>.<span class="number">04</span></span><br><span class="line">&gt; wsl --import Ubuntu-<span class="number">18</span>.<span class="number">04</span> s:\wsl2\Ubuntu-<span class="number">18</span>.<span class="number">04</span> s:\wsl2\Ubuntu-<span class="number">18</span>.<span class="number">04</span>.tar --version <span class="number">2</span> </span><br></pre></td></tr></table></div></figure>
+
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; wsl --export docker-desktop-data s:\wsl2\docker-desktop-data.tar  </span><br><span class="line">&gt; wsl --unregister docker-desktop-data </span><br><span class="line">&gt; wsl --import docker-desktop-data s:\wsl2\docker-desktop-data s:\wsl2\docker-desktop-data.tar --version <span class="number">2</span></span><br><span class="line">&gt; wsl --export docker-desktop s:\wsl2\docker-desktop.tar   </span><br><span class="line">&gt; wsl --unregister docker-desktop</span><br><span class="line">&gt; wsl --import docker-desktop s:\wsl2\docker-desktop s:\wsl2\docker-desktop.tar --version <span class="number">2</span></span><br></pre></td></tr></table></div></figure>
+<p>这一步走完 打开docker desktop 可能会一直转圈，重启一下系统可能会好</p>
+<p>测试 docker 是否可以正常运行</p>
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; docker -v</span><br><span class="line">Docker version <span class="number">24</span>.<span class="number">0</span>.<span class="number">2</span>, build cb74dfc </span><br><span class="line">&gt; docker-compose -v</span><br><span class="line">&gt; docker pull hello-world</span><br></pre></td></tr></table></div></figure>
+
+<p>docker 运行 mysql 并将 mysql 的数据映射到 windows 盘符里</p>
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; docker run --name mysql -v /s/Development/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -p <span class="number">3306</span>:<span class="number">3306</span> -d mysql:<span class="number">5</span>.<span class="number">7</span></span><br></pre></td></tr></table></div></figure>
+
+<p>查看docker安装和启动的镜像</p>
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; docker images</span><br><span class="line">&gt; docker ps</span><br></pre></td></tr></table></div></figure>
+
+<p>打开 Navicat 连接 MySQL，地址就是本地地址</p>
+
+        <h2 id="Redis"   >
+          <a href="#Redis" class="heading-link"><i class="fas fa-link"></i></a><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2>
+      <p>安装</p>
+<figure class="highlight cmd"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; docker run --<span class="built_in">net</span> host -d --privileged=true -p <span class="number">6379</span>:<span class="number">6379</span> -v /s/Development/Redis:/usr/local/etc/redis -v /s/Development/Redis/log:/log --name redis redis redis-server /usr/local/etc/redis/redis.conf</span><br></pre></td></tr></table></div></figure>
+
+<p>但是实际上 redis 并不能获取到这个redis.conf，为此试图通过文件映射，进行conf文件的使用</p>
+<p>关于 redis.conf</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">bind 0.0.0.0</span><br><span class="line">protected-mode yes</span><br><span class="line">port 6379</span><br><span class="line">tcp-backlog 511</span><br><span class="line">timeout 0</span><br><span class="line">tcp-keepalive 300</span><br><span class="line">daemonize no</span><br><span class="line">pidfile /var/run/redis_6379.pid</span><br><span class="line">loglevel notice</span><br><span class="line">logfile /log/redis-server.log</span><br><span class="line">databases 16</span><br><span class="line">always-show-logo no</span><br><span class="line">set-proc-title yes</span><br><span class="line">proc-title-template &quot;&#123;title&#125; &#123;listen-addr&#125; &#123;server-mode&#125;&quot;</span><br><span class="line">stop-writes-on-bgsave-error yes</span><br><span class="line">rdbcompression yes</span><br><span class="line">rdbchecksum yes</span><br><span class="line">dbfilename dump.rdb</span><br><span class="line">rdb-del-sync-files no</span><br><span class="line"># 数据挂载位置</span><br><span class="line">dir /usr/local/etc/redis</span><br><span class="line">replica-serve-stale-data yes</span><br><span class="line">replica-read-only yes</span><br><span class="line">repl-diskless-sync no</span><br><span class="line">repl-diskless-sync-delay 5</span><br><span class="line">repl-diskless-load disabled</span><br><span class="line">repl-disable-tcp-nodelay no</span><br><span class="line">replica-priority 100</span><br><span class="line">acllog-max-len 128</span><br><span class="line">lazyfree-lazy-eviction no</span><br><span class="line">lazyfree-lazy-expire no</span><br><span class="line">lazyfree-lazy-server-del no</span><br><span class="line">replica-lazy-flush no</span><br><span class="line">lazyfree-lazy-user-del no</span><br><span class="line">lazyfree-lazy-user-flush no</span><br><span class="line">oom-score-adj no</span><br><span class="line">oom-score-adj-values 0 200 800</span><br><span class="line">disable-thp yes</span><br><span class="line"># 数据持久化</span><br><span class="line">appendonly yes</span><br><span class="line">appendfilename &quot;appendonly.aof&quot;</span><br><span class="line">appendfsync everysec</span><br><span class="line">no-appendfsync-on-rewrite no</span><br><span class="line">auto-aof-rewrite-percentage 100</span><br><span class="line">auto-aof-rewrite-min-size 64mb</span><br><span class="line">aof-load-truncated yes</span><br><span class="line">aof-use-rdb-preamble yes</span><br><span class="line">lua-time-limit 5000</span><br><span class="line">slowlog-log-slower-than 10000</span><br><span class="line">slowlog-max-len 128</span><br><span class="line">latency-monitor-threshold 0</span><br><span class="line">notify-keyspace-events &quot;&quot;</span><br><span class="line">hash-max-ziplist-entries 512</span><br><span class="line">hash-max-ziplist-value 64</span><br><span class="line">list-max-ziplist-size -2</span><br><span class="line">list-compress-depth 0</span><br><span class="line">set-max-intset-entries 512</span><br><span class="line">zset-max-ziplist-entries 128</span><br><span class="line">zset-max-ziplist-value 64</span><br><span class="line">hll-sparse-max-bytes 3000</span><br><span class="line">stream-node-max-bytes 4096</span><br><span class="line">stream-node-max-entries 100</span><br><span class="line">activerehashing yes</span><br><span class="line">client-output-buffer-limit normal 0 0 0</span><br><span class="line">client-output-buffer-limit replica 256mb 64mb 60</span><br><span class="line">client-output-buffer-limit pubsub 32mb 8mb 60</span><br><span class="line">hz 10</span><br><span class="line">dynamic-hz yes</span><br><span class="line">aof-rewrite-incremental-fsync yes</span><br><span class="line">rdb-save-incremental-fsync yes</span><br><span class="line">jemalloc-bg-thread yes</span><br></pre></td></tr></table></div></figure>
+
+<p>尝试了很久都没有办法在 windows 连接到 redis，最后在浏览器输入 6379 之后，突然发现以下消息</p>
+<blockquote>
+<p>-DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command ‘CONFIG SET protected-mode no’ from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to ‘no’, and then restarting the server. 3) If you started the server manually just for testing, restart it with the ‘–protected-mode no’ option. 4) Setup a an authentication password for the default user. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.</p>
+</blockquote>
+<p>因为这是不安全的 所以不允许外部访问了，根据第四条 设置一个密码就好，在conf文件后追加 requirepass password</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/29/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E6%AF%94%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%A7%E8%83%BD%E9%AB%98%EF%BC%9F/">面向过程比面向对象性能高？</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-29</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>Java 性能差的原因是因为 Java 是半编译语言，最终的执行代码不是可以直接被 CPU 执行的二进制编码。</p>
 <p>面向过程语言大多数是直接编译成机械码在电脑上执行。而且面向过程性能也不一定比面向对象性能好。</p>
 <p>设计范式和性能无关的。主要是编程语言的运行机制决定的。</p>
 <p><strong>相关链接</strong></p>
@@ -69,90 +276,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <li>重写的方法可以抛出非强制性异常，不可以抛出比被重写方法声明更广泛的强制性异常</li>
 <li>不能重写构造方法，具体可以查看[[继承#构造器]]</li>
 </ul>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/29/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/%E7%BB%A7%E6%89%BF/">继承</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-29</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>不同类型的对象，相互之间有一些共同点。同时每一个对象又定义了额外的特性使他们与众不同。<strong>继承是使用父类的定义作为基础建立子类的思想，子类拥有父类的特征和行为，子类可以增加新的数据或者新的功能，但是不能选择性的继承父类，只能全部继承。</strong></p>
-<p>继承符合的关系是 is-a</p>
-<p>使用继承可以快速创建新的类，提高代码重用性，程序的可维护性。</p>
-<p><strong>特性：</strong></p>
-<ol>
-<li>子类拥有父类所有的属性和方法，但是不能访问私有属性和方法。</li>
-<li>子类可以拥有自己的属性和方法。</li>
-<li>子类可以重新实现父类的方法。</li>
-<li>所有类默认继承 Object（Java)</li>
-<li>Java 的继承是单继承，但是可以多重继承</li>
-</ol>
-
-        <h1 id="多重继承"   >
-          <a href="#多重继承" class="heading-link"><i class="fas fa-link"></i></a><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h1>
-      <p>多重继承指的是一个父类还有一个父类，子类也可以继承到父类的父类的属性和方法（C++中没有这个特性）</p>
-
-        <h1 id="实现"   >
-          <a href="#实现" class="heading-link"><i class="fas fa-link"></i></a><a href="#实现" class="headerlink" title="实现"></a>实现</h1>
-      <p>实现是继承的一种，是类与[[接口]]之间的继承关系，由于接口是一组方法的集合，所以用实现方法而不是继承方法更符合描述。</p>
-
-        <h1 id="构造器"   >
-          <a href="#构造器" class="heading-link"><i class="fas fa-link"></i></a><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h1>
-      <p>Java: 子类不继承父类的构造器，只是在实例化时显式或隐式调用。父类如果有有参构造器，那么子类的构造器中必须显式的使用 super 方式调用，如果是无参构造器（Java默认没有写构造器的话也有一个无参构造器），则不需要调用，系统会自动调用父类的无参构造器。</p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/29/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/%E6%8E%A5%E5%8F%A3/">接口</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-29</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>接口是一种特殊的[[抽象类]]，是只包含抽象方法的集合，一个类通过继承接口的方式，继承实现接口的抽象方法。 ^e92cf9</p>
-<p>接口并不是类，编写接口的方式和类很相似，但是不是同一个概念，接口只包含类要实现的方法。除非实现接口的类是抽象类，否则这个类要定义接口的所有方法。</p>
-<p><strong>特性：</strong></p>
-<ul>
-<li>接口是隐式抽象的，当声明一个接口的时候，不必使用 abstract 关键字</li>
-<li>接口中不能有静态代码块</li>
-<li>接口中的方法隐式指定为 public abstract （其他访问修饰符会报错）</li>
-<li>接口中的变量隐式指定为 public static final （同上）</li>
-</ul>
-
-        <h2 id="接口的方法"   >
-          <a href="#接口的方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#接口的方法" class="headerlink" title="接口的方法"></a>接口的方法</h2>
-      <p>Java 8 之后 Interface 可以用 <code>default</code> 和 <code>static</code> 修饰方法，这样的方法可以有方法体，实现类也不用重写方法。</p>
-<ol>
-<li><code>default</code> 修饰的方法可以通过 this 调用，也可以被[[继承]]、[[重写]]。</li>
-<li><code>static</code> 修饰的方法与静态方法一样，但是不能被[[继承]]。</li>
-</ol>
-
-        <h2 id="接口的实现"   >
-          <a href="#接口的实现" class="heading-link"><i class="fas fa-link"></i></a><a href="#接口的实现" class="headerlink" title="接口的实现"></a>接口的实现</h2>
-      <ul>
-<li>一个非抽象类实现接口的同时，必须同时实现接口中的方法。</li>
-<li>一个类可以实现多个接口。</li>
-<li>一个接口可以继承多个接口，类的多继承不合法，接口可以实现多继承，子接口继承父接口的方法。</li>
-</ul>
-<figure class="highlight java"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">a</span> <span class="keyword">extends</span> <span class="title class_">b</span>, c</span><br></pre></td></tr></table></div></figure>
-
-<p>如果一个类实现了两个接口，并且这两个接口有同一个 default 方法，那么这个类就必须重写这个方法。否则编译会报错。</p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/29/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/%E6%8A%BD%E8%B1%A1%E7%B1%BB/">抽象类</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-29</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>有一些类不是用来描绘对象的，这样的类没有足够的信息，就是抽象类。</p>
-
-        <h2 id="特点"   >
-          <a href="#特点" class="heading-link"><i class="fas fa-link"></i></a><a href="#特点" class="headerlink" title="特点"></a>特点</h2>
-      <ul>
-<li>抽象类不能进行实例化，但是其他类的功能依然存在：成员变量、成员方法、构造方法… ^bdf134</li>
-<li>由于抽象类不能实例化，所以必须继承才能使用抽象类。</li>
-<li>抽象类表示一种继承关系，一个类只能继承一个抽象类。</li>
-</ul>
-
-        <h2 id="抽象方法"   >
-          <a href="#抽象方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h2>
-      <p>抽象方法只能存在于抽象类里，抽象方法不用实现（使用大括号的具体方法实现）。</p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/29/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/%E5%B0%81%E8%A3%85/">封装</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-29</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>封装是把一个对象的属性隐藏在对象内部，不允许外部直接访问对象的内部信息，通过一些可以被外界访问的方法来操作属性。</p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/05/29/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/%E5%A4%9A%E6%80%81/">多态</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-05-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-29</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>多态是一个对象有多种状态，具体表现为父类的引用指向子类的实例。</p>
-<p><strong>多态的特点：</strong></p>
-<ul>
-<li>对象类型和引用类型之间具有 [[继承]]&#x2F;[[继承#实现]] 的关系</li>
-<li>引用类型变量的方法调用的是哪个类里的方法，在程序运行期间才能确定</li>
-<li>引用类型变量不能调用子类扩展的方法 </li>
-<li>如果子类[[重写]]了父类的方法，调用的子类重写的方法，如果没有重写，调用的是父类的方法</li>
-</ul>
-<p><strong>注意</strong>（个人观点）</p>
-<p>[[重载]] 不是多态。<br>从运行时期来说：多态的深层含义是运行时调用的是父类还是子类，重载是编译期时对不同参数表的方法的修饰形成不同的方法，对于这些不同的方法，再编译期间就决定了调用哪一个，被称为静态绑定。<br>从对象来说：广泛上的多态指的是类之间因为继承&#x2F;实现的先决条件产生的，而重载针对的方法，可以在父子类中重载，也可以不用继承重载自身的方法。</p>
-<blockquote>
-<p>如果它不是晚绑定，它就不是多态。<br>    ——《Java 编程思想》</p>
-</blockquote>
-<p>在面向对象编程中，方法的绑定可以在编译时或运行时进行。编译时绑定也称为早绑定（静态绑定），运行时绑定也称为晚绑定（动态绑定）。</p>
-
-        <h4 id="参考链接"   >
-          <a href="#参考链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4>
-      <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37703616/article/details/80041057" >对多态的理解</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/nitze/article/details/125265758?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-3-125265758-blog-114889906.235%5Ev36%5Epc_relevant_anti_vip_base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-3-125265758-blog-114889906.235%5Ev36%5Epc_relevant_anti_vip_base&utm_relevant_index=4" >关于重载是不是多态</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43117978/article/details/105446166?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-105446166-blog-114889906.235%5Ev36%5Epc_relevant_anti_vip_base&spm=1001.2101.3001.4242.2&utm_relevant_index=2" >Java——重载是不是多态</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/avatar1.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">Hello World</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YanOnjun" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">27</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">14</div><div class="sidebar-ov-state-item__name">标签</div></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Rise Spring</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script>function initSearch() {
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/avatar2.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">每天都好困😋</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/YanOnjun" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">32</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">16</div><div class="sidebar-ov-state-item__name">标签</div></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Rise Spring</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
 
